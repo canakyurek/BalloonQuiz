@@ -21,8 +21,6 @@ class EndingViewController: UIViewController {
     }
     
     @IBAction func playAgainTapped(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(
-            withIdentifier: "Game") as! GameViewController
-        present(vc, animated: true, completion: nil)
+
     }
 }

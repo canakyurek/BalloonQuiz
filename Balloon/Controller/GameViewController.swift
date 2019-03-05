@@ -16,6 +16,12 @@ class GameViewController: UIViewController {
     @IBOutlet var choiceButtons: [UIButton]!
     @IBOutlet weak var sceneView: SKView!
     
+    @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
+        if let _ = sender.source as? EndingViewController {
+            self.viewDidLoad()
+        }
+    }
+    
     var currentIndex = 0
     var correctCount = 0
     
@@ -54,7 +60,7 @@ class GameViewController: UIViewController {
         if questions[currentIndex].correctAnswer == sender.tag {
             notificationCenter
                 .post(name: Notification.Name("CorrectAnswer"), object: nil)
-            sender.backgroundColor = .green
+            sender.backgroundColor = UIColor(named: "green")
             currentIndex += 1
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] _ in
                 guard let `self` = self else { return }
@@ -64,26 +70,29 @@ class GameViewController: UIViewController {
         } else {
             notificationCenter
                 .post(name: Notification.Name("FalseAnswer"), object: nil)
-            sender.backgroundColor = .red
+            sender.backgroundColor = UIColor(named: "red")
             let tag = questions[currentIndex].correctAnswer
-            self.view.viewWithTag(tag)?.backgroundColor = .green
-            Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] _ in
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
                 guard let `self` = self else { return }
-                self.presentViewController(withID: "Ending")
+                self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
+            }
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] _ in
+                guard let `self` = self else { return }
+                self.performSegue(withIdentifier: "endGameSegue", sender: self)
             }
         }
     }
     
-    func presentViewController(withID id: String) {
-        let vc = storyboard?.instantiateViewController(
-            withIdentifier: id) as! EndingViewController
-        vc.correctCount = currentIndex
-        self.present(vc, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "endGameSegue" {
+            let vc = segue.destination as! EndingViewController
+            vc.correctCount = currentIndex
+        }
     }
 }
 
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
-        presentViewController(withID: "Ending")
+        performSegue(withIdentifier: "endGameSegue", sender: self)
     }
 }

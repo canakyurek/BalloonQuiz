@@ -62,8 +62,8 @@ class Scene: SKScene {
         case 49...599:
             self.backgroundColor = UIColor(named: "lightBlue")!
         case 44...48:
-            sceneDelegate?.balloonDidCrash()
             balloon.crash()
+            sceneDelegate?.balloonDidCrash()
         default:
             print("game over")
         }

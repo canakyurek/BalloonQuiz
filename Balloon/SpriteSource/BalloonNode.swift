@@ -15,7 +15,7 @@ class BalloonNode: SKSpriteNode {
                position: CGPoint,
                size: CGSize) {
         
-        self.texture = SKTexture(imageNamed: "balloonTexture")
+        self.texture = SKTexture(imageNamed: "balloon")
         parentNode.addChild(self)
         self.position = position
         self.size = size
@@ -46,5 +46,7 @@ class BalloonNode: SKSpriteNode {
     
     func crash() {
         self.removeAllActions()
+        self.removeAllChildren()
+        self.removeFromParent()
     }
 }
