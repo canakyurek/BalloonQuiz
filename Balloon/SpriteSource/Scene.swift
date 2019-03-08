@@ -42,6 +42,10 @@ class Scene: SKScene {
                                        selector: #selector(self.applyImpulse),
                                        name: NSNotification.Name("CorrectAnswer"),
                                        object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(self.explodeBalloon),
+                                       name: NSNotification.Name("FalseAnswer"),
+                                       object: nil)
         balloon.spawn(on: self,
                       position: CGPoint(x: 40, y: 500),
                       size: CGSize(width: 70, height: 100))
@@ -51,21 +55,27 @@ class Scene: SKScene {
         notificationCenter.removeObserver(self)
     }
     
+    override func update(_ currentTime: TimeInterval) {
+        if self.position.y < self.frame.height * 0.6 {
+            self.position.y = self.frame.height * 0.6
+        }
+    }
+    
     @objc func applyImpulse() {
         balloon.refuel()
     }
     
+    @objc func explodeBalloon() {
+        balloon.moveToFloor()
+    }
+    
     override func didEvaluateActions() {
         switch balloon.position.y {
-        case 600...800:
-            self.backgroundColor = UIColor(named: "green")!
-        case 49...599:
-            self.backgroundColor = UIColor(named: "lightBlue")!
-        case 44...48:
+        case 0...5:
             balloon.crash()
             sceneDelegate?.balloonDidCrash()
         default:
-            print("game over")
+            self.backgroundColor = UIColor(named: "lightBlue")!
         }
     }
 }

@@ -19,6 +19,7 @@ class BalloonNode: SKSpriteNode {
         parentNode.addChild(self)
         self.position = position
         self.size = size
+        self.anchorPoint = CGPoint(x: 0.5, y: 0)
         self.color = .yellow
         // Pi / 36 is 5 degrees
         let rotateRight = SKAction.rotate(byAngle: .pi / 36, duration: 0.5)
@@ -30,18 +31,24 @@ class BalloonNode: SKSpriteNode {
             rotateLeft,
             rotateRight2,
             rotateLeft2])
-        let moveDownward = SKAction.move(by: CGVector(dx: 0, dy: -40), duration: 2)
+        let moveDownward = SKAction.move(by: CGVector(dx: 0, dy: -100), duration: 2)
         let actionGroup = SKAction.group([rotationSequence, moveDownward])
         let action = SKAction.repeatForever(actionGroup)
         run(action)
     }
     
     func refuel() {
-        let moveUpward = SKAction.move(by: CGVector(dx: 0, dy: 120),
+        let moveUpward = SKAction.move(by: CGVector(dx: 0, dy: 200),
                                        duration: 2)
         let zeroRotation = SKAction.rotate(toAngle: 0, duration: 2)
         let group = SKAction.group([moveUpward, zeroRotation])
         run(group)
+    }
+    
+    func moveToFloor() {
+        let moveToFloor = SKAction.move(to: CGPoint(x: self.position.x, y: 2), duration: 1)
+        run(moveToFloor)
+        self.speed = 0
     }
     
     func crash() {

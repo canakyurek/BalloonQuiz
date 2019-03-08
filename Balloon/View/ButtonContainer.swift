@@ -19,7 +19,7 @@ class ButtonContainer: UIView {
         }
     }
     
-    var tapAction: (() -> Void)?
+    var tapAction: (() -> Void)? = nil
     var title = ""
     
     override func awakeFromNib() {
@@ -42,6 +42,6 @@ class ButtonContainer: UIView {
     }
     
     @IBAction func tapped(_ sender: UIButton) {
-        tapAction!()
+        tapAction?()
     }
 }
