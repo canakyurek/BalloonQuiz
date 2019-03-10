@@ -36,6 +36,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>RTRaleway-Bold.ttf</string>
+		<string>RTRaleway-Regular.ttf</string>
 		<string>LuckiestGuy-Regular.tff</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
