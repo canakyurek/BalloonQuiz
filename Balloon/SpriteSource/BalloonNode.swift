@@ -19,6 +19,7 @@ class BalloonNode: SKSpriteNode {
         parentNode.addChild(self)
         self.position = position
         self.size = size
+        setupPhysicsBody()
         self.anchorPoint = CGPoint(x: 0.5, y: 0)
         self.color = .yellow
         // Pi / 36 is 5 degrees
@@ -35,6 +36,15 @@ class BalloonNode: SKSpriteNode {
         let actionGroup = SKAction.group([rotationSequence, moveDownward])
         let action = SKAction.repeatForever(actionGroup)
         run(action)
+    }
+    
+    private func setupPhysicsBody() {
+        self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.categoryBitMask = Category.balloon.rawValue
+        self.physicsBody?.contactTestBitMask = Category.floor.rawValue
+        self.physicsBody?.collisionBitMask = Category.floor.rawValue
     }
     
     func refuel() {
@@ -56,4 +66,9 @@ class BalloonNode: SKSpriteNode {
         self.removeAllChildren()
         self.removeFromParent()
     }
+}
+
+enum Category: UInt32 {
+    case balloon = 0b001
+    case floor = 0b010
 }

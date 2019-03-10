@@ -15,6 +15,7 @@ protocol GameSceneDelegate: class {
 
 class Scene: SKScene {
 
+    var floor: SKSpriteNode!
     let balloon = BalloonNode()
     let notificationCenter = NotificationCenter.default
     weak var sceneDelegate: GameSceneDelegate?
@@ -35,8 +36,7 @@ class Scene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        
-        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        self.physicsWorld.contactDelegate = self
         self.backgroundColor = .clear
         notificationCenter.addObserver(self,
                                        selector: #selector(self.applyImpulse),
@@ -49,16 +49,11 @@ class Scene: SKScene {
         balloon.spawn(on: self,
                       position: CGPoint(x: 40, y: 500),
                       size: CGSize(width: 70, height: 100))
+        setupFloor()
     }
     
     deinit {
         notificationCenter.removeObserver(self)
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        if self.position.y < self.frame.height * 0.6 {
-            self.position.y = self.frame.height * 0.6
-        }
     }
     
     @objc func applyImpulse() {
@@ -69,13 +64,29 @@ class Scene: SKScene {
         balloon.moveToFloor()
     }
     
-    override func didEvaluateActions() {
-        switch balloon.position.y {
-        case 0...5:
-            balloon.crash()
-            sceneDelegate?.balloonDidCrash()
-        default:
-            self.backgroundColor = UIColor(named: "lightBlue")!
+    func setupFloor() {
+        floor = SKSpriteNode(color: .red, size: CGSize(width: self.frame.width, height: 10))
+        floor.position = CGPoint(x: 0, y: -50)
+        floor.anchorPoint = CGPoint.zero
+        floor.physicsBody = SKPhysicsBody(rectangleOf: floor.size)
+        floor.physicsBody?.categoryBitMask = Category.floor.rawValue
+        floor.physicsBody?.contactTestBitMask = Category.balloon.rawValue
+        floor.physicsBody?.collisionBitMask = Category.balloon.rawValue
+        floor.physicsBody?.isDynamic = false
+        floor.physicsBody?.affectedByGravity = false
+        
+        self.addChild(floor)
+    }
+}
+
+extension Scene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == Category.balloon.rawValue
+            || contact.bodyB.categoryBitMask == Category.balloon.rawValue {
+            if contact.bodyA.categoryBitMask == Category.floor.rawValue
+                || contact.bodyB.categoryBitMask == Category.floor.rawValue {
+                sceneDelegate?.balloonDidCrash()
+            }
         }
     }
 }
