@@ -24,29 +24,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setOperation()
-        
+        // Check if there is any saved list.
+        // If not, obtain list.
+        if let list = SaveUtil.loadList() {
+            dualList = list
+        } else {
+            obtainQuestionList()
+        }
+        presentButtons()
         playButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }
             self.performSegue(withIdentifier: "startGameSegue", sender: self)
         }
-    }
-    
-    func setOperation() {
-        self.activityIndicator.startAnimating()
-        let operationQueue = OperationQueue()
-        let completion = BlockOperation { [weak self] in
-            guard let `self` = self else { return }
-            self.presentButtons()
-        }
-        let operation = BlockOperation { [weak self] in
-            guard let `self` = self else { return }
-            self.obtainQuestionList()
-        }
-        
-        operationQueue.addOperation(operation)
-        completion.addDependency(operation)
-        OperationQueue.main.addOperation(completion)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,6 +62,10 @@ class MainViewController: UIViewController {
         var obtainedQuestion = ""
         var obtainedAnswers = [String]()
         
+        // Start animating the activity indicator
+        self.activityIndicator.startAnimating()
+        
+        // Obtain question word, correct answer and wrong ones.
         for dualToSplit in sequences.shuffled() {
             
             let dual = dualToSplit.split(separator: "*")
@@ -107,6 +100,7 @@ class MainViewController: UIViewController {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
         }
-        //SaveUtil.saveList(dualList)
+        // Save the obtained list.
+        SaveUtil.saveList(dualList)
     }
 }

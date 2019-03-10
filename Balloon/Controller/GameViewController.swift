@@ -19,8 +19,7 @@ class GameViewController: UIViewController {
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
         if let _ = sender.source as? EndingViewController {
-            currentIndex = 0
-            viewDidLoad()
+            configQuestionList()
         }
     }
     
@@ -34,19 +33,27 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         if questions != nil {
+            configQuestionList()
+        }
+    }
+    
+    func setupScene() {
+        let gameScene = Scene(delegate: self)
+        sceneView.backgroundColor = SKColor.clear
+        sceneView.ignoresSiblingOrder = true
+        gameScene.size = sceneView.bounds.size
+        sceneView.presentScene(gameScene)
+    }
+    
+    func configQuestionList() {
+        if questions != nil {
+            currentIndex = 0
             questions = questions!.shuffled()
             counterLabel.text = "\(currentIndex + 1)/\(questions!.count)"
-            let gameScene = Scene(delegate: self)
-            sceneView.backgroundColor = SKColor.clear
-            sceneView.ignoresSiblingOrder = true
-            gameScene.size = sceneView.bounds.size
-            sceneView.presentScene(gameScene)
+            setupScene()
             
             askQuestion(at: currentIndex)
         }
-      //  try! NSKeyedArchiver.archivedData(withRootObject: questions,
-      //                               requiringSecureCoding: false)
-        
     }
     
     func removeState() {
