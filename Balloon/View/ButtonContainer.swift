@@ -8,19 +8,18 @@
 
 import UIKit
 
+enum IconName: String {
+    case play = "play"
+    case settings = "settings"
+    case replay = "replay"
+}
 class ButtonContainer: UIView {
     
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBInspectable public var buttonTitle: String = "" {
-        didSet {
-            title = buttonTitle
-        }
-    }
+    @IBOutlet weak private var contentView: UIView!
+    @IBOutlet weak private var button: UIButton!
+    @IBOutlet weak private var imageView: UIImageView!
     
     var tapAction: (() -> Void)? = nil
-    var title = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,12 +27,24 @@ class ButtonContainer: UIView {
         Bundle.main.loadNibNamed("ButtonContainer", owner: self, options: nil)
         self.frame = contentView.frame
         self.addSubview(contentView)
-        imageView.image = UIImage(named: "indicator")
+        
+        setupLayer()
+    }
+    
+    func setTitle(as title: String) {
+        button.setTitle(title, for: .normal)
+    }
+    
+    func setIconImage(named name: IconName) {
+        let image = UIImage(named: name.rawValue)
+        imageView.image = image
+    }
+    
+    private func setupLayer() {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
         self.layer.borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.2).cgColor
         self.layer.borderWidth = 4
-        button.setTitle(title, for: .normal)
     }
     
     required init?(coder aDecoder: NSCoder) {

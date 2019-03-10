@@ -31,11 +31,20 @@ class MainViewController: UIViewController {
         } else {
             obtainQuestionList()
         }
+        setupButtons()
         presentButtons()
+    }
+    
+    func setupButtons() {
+        playButtonContainer.setTitle(as: "Play")
+        playButtonContainer.setIconImage(named: .play)
         playButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }
             self.performSegue(withIdentifier: "startGameSegue", sender: self)
         }
+        
+        settingsButtonContainer.setTitle(as: "Settings")
+        settingsButtonContainer.setIconImage(named: .settings)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

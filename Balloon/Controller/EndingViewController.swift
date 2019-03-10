@@ -13,14 +13,22 @@ class EndingViewController: UIViewController {
     var correctCount = 0
     
     @IBOutlet weak var correctCountLabel: UILabel!
+    @IBOutlet weak var replayButtonContainer: ButtonContainer!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         correctCountLabel.text = "\(correctCount)"
+        setupButton()
     }
     
-    @IBAction func playAgainTapped(_ sender: UIButton) {
-
+    func setupButton() {
+        replayButtonContainer.setTitle(as: "Replay")
+        replayButtonContainer.setIconImage(named: .replay)
+        replayButtonContainer.tapAction = { [weak self] in
+            guard let `self` = self else { return }
+            self.performSegue(withIdentifier: "replayGameSegue", sender: self)
+        }
     }
 }
