@@ -43,7 +43,7 @@ class Scene: SKScene {
                                        name: NSNotification.Name("CorrectAnswer"),
                                        object: nil)
         notificationCenter.addObserver(self,
-                                       selector: #selector(self.explodeBalloon),
+                                       selector: #selector(self.knockOffTheBalloon),
                                        name: NSNotification.Name("FalseAnswer"),
                                        object: nil)
         balloon.spawn(on: self,
@@ -60,7 +60,7 @@ class Scene: SKScene {
         balloon.refuel()
     }
     
-    @objc func explodeBalloon() {
+    @objc func knockOffTheBalloon() {
         balloon.moveToFloor()
     }
     
