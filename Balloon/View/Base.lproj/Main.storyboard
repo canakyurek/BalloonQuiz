@@ -89,6 +89,7 @@
                         <outlet property="playButtonContainer" destination="cf7-V3-a2Y" id="Usq-Ou-QdW"/>
                         <outlet property="settingsButtonContainer" destination="dbw-Z9-V7O" id="hC8-bO-9Ny"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startGameSegue" id="ywx-Wn-jad"/>
+                        <segue destination="2eQ-Vh-iEf" kind="presentation" identifier="settingsSegue" id="9Ih-FT-kK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULo-fj-aeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,6 +263,140 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="P0j-rp-DNI">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="2eQ-Vh-iEf" customClass="SettingsViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPv-uy-0Pj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-cP-o4B">
+                                <rect key="frame" x="33" y="329" width="309" height="305"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AYARLAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3x-TT-mOp">
+                                        <rect key="frame" x="28" y="20" width="122" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="6HX-OG-tCb"/>
+                                            <constraint firstAttribute="width" constant="122" id="NgD-az-neo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-pd-f25">
+                                        <rect key="frame" x="247" y="20" width="34" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="3la-e0-fZk"/>
+                                            <constraint firstAttribute="width" constant="34" id="kMs-hc-vKR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="18"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="Uot-CG-O7i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-l4-S1P">
+                                        <rect key="frame" x="28" y="149" width="253" height="40"/>
+                                        <color key="backgroundColor" name="green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="OYH-nj-wuX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                        <state key="normal" title="REKLAMLARI KALDIR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="removeAdsTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="NAE-1Z-OKz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI7-eb-Tre">
+                                        <rect key="frame" x="28" y="197" width="253" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fXN-5S-foo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                        <state key="normal" title="SATIN ALIMI YİNELE">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-sE-6ZY">
+                                        <rect key="frame" x="28" y="245" width="253" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BaB-Ym-EGJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                        <state key="normal" title="İLETİŞİM">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Mgi-sE-6ZY" secondAttribute="bottom" constant="20" id="5fC-VG-TRf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2G1-pd-f25" secondAttribute="trailing" constant="28" id="9Xe-ua-0b4"/>
+                                    <constraint firstItem="c3x-TT-mOp" firstAttribute="top" secondItem="uMd-cP-o4B" secondAttribute="top" constant="20" id="Cx8-al-KO7"/>
+                                    <constraint firstItem="LI7-eb-Tre" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="JgO-bk-jmg"/>
+                                    <constraint firstAttribute="trailing" secondItem="9q8-l4-S1P" secondAttribute="trailing" constant="28" id="LQn-S1-h9E"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mgi-sE-6ZY" secondAttribute="trailing" constant="28" id="LyU-z6-3cJ"/>
+                                    <constraint firstItem="c3x-TT-mOp" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="N58-sx-mL5"/>
+                                    <constraint firstItem="2G1-pd-f25" firstAttribute="top" secondItem="uMd-cP-o4B" secondAttribute="top" constant="20" id="aMq-IG-FlB"/>
+                                    <constraint firstAttribute="height" constant="305" id="fMh-Tm-4sL"/>
+                                    <constraint firstAttribute="trailing" secondItem="LI7-eb-Tre" secondAttribute="trailing" constant="28" id="j5Y-Jy-DTs"/>
+                                    <constraint firstItem="9q8-l4-S1P" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="k05-Lc-aiH"/>
+                                    <constraint firstItem="LI7-eb-Tre" firstAttribute="top" secondItem="9q8-l4-S1P" secondAttribute="bottom" constant="8" id="lL8-0G-cCh"/>
+                                    <constraint firstItem="Mgi-sE-6ZY" firstAttribute="top" secondItem="LI7-eb-Tre" secondAttribute="bottom" constant="8" id="s7Q-3c-M2r"/>
+                                    <constraint firstItem="Mgi-sE-6ZY" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="zmd-87-GsG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nx9-dA-8QA" firstAttribute="trailing" secondItem="uMd-cP-o4B" secondAttribute="trailing" constant="33" id="56Y-cf-86l"/>
+                            <constraint firstItem="uMd-cP-o4B" firstAttribute="leading" secondItem="Nx9-dA-8QA" secondAttribute="leading" constant="33" id="8yh-cb-v0A"/>
+                            <constraint firstItem="uMd-cP-o4B" firstAttribute="bottom" secondItem="Nx9-dA-8QA" secondAttribute="bottom" constant="-33" id="XtO-KM-Jq5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nx9-dA-8QA"/>
+                    </view>
+                    <connections>
+                        <segue destination="Z1K-x8-UjV" kind="unwind" identifier="closeSettingsSegue" unwindAction="unwindToMainSegue:" id="ILU-Wg-TF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qx-ga-8Cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Z1K-x8-UjV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-570.39999999999998" y="917.99100449775119"/>
+        </scene>
         <!--Ending View Controller-->
         <scene sceneID="5pg-SE-8md">
             <objects>
@@ -335,6 +470,9 @@
         <image name="gameBackground" width="1600" height="1246"/>
         <namedColor name="buttonBackground">
             <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.26899999380111694" green="0.72100001573562622" blue="0.36500000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

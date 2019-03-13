@@ -15,6 +15,7 @@ protocol GameSceneDelegate: class {
 
 class Scene: SKScene {
 
+    var sceneCamera: SKCameraNode!
     var floor: SKSpriteNode!
     let balloon = BalloonNode()
     let notificationCenter = NotificationCenter.default
@@ -35,9 +36,16 @@ class Scene: SKScene {
         
     }
     
+    func setCamera() {
+        sceneCamera = SKCameraNode()
+        sceneCamera.position = CGPoint(x: 0, y: 0)
+        self.camera = sceneCamera
+    }
+    
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         self.backgroundColor = .clear
+        self.scaleMode = .aspectFill
         notificationCenter.addObserver(self,
                                        selector: #selector(self.applyImpulse),
                                        name: NSNotification.Name("CorrectAnswer"),
@@ -46,6 +54,7 @@ class Scene: SKScene {
                                        selector: #selector(self.knockOffTheBalloon),
                                        name: NSNotification.Name("FalseAnswer"),
                                        object: nil)
+        setCamera()
         balloon.spawn(on: self,
                       position: CGPoint(x: 40, y: 500),
                       size: CGSize(width: 70, height: 100))
@@ -54,6 +63,13 @@ class Scene: SKScene {
     
     deinit {
         notificationCenter.removeObserver(self)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
+        
+        sceneCamera.position = CGPoint(x: balloon.position.x + 150,
+                                       y: balloon.position.y - 100)
     }
     
     @objc func applyImpulse() {

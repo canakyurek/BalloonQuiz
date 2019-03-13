@@ -19,7 +19,18 @@ class MainViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToMainSegue(_ sender: UIStoryboardSegue) {
+        if let _ = sender.source as? SettingsViewController {
+            UIView.animate(withDuration: buttonAnimationDuration) { [weak self] in
+                guard let `self` = self else { return }
+                self.playButtonContainer.alpha = 1
+                self.settingsButtonContainer.alpha = 1
+            }
+        }
+    }
+    
     var dualList = [Question]()
+    let buttonAnimationDuration = 0.2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +56,22 @@ class MainViewController: UIViewController {
         
         settingsButtonContainer.setTitle(as: "Settings")
         settingsButtonContainer.setIconImage(named: .settings)
+        settingsButtonContainer.tapAction = { [weak self] in
+            guard let `self` = self else { return }
+            self.performSegue(withIdentifier: "settingsSegue", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "startGameSegue" {
             if let destination = segue.destination as? GameViewController {
                 destination.questions = dualList
+            }
+        } else if segue.identifier == "settingsSegue" {
+            UIView.animate(withDuration: buttonAnimationDuration) { [weak self] in
+                guard let `self` = self else { return }
+                self.playButtonContainer.alpha = 0
+                self.settingsButtonContainer.alpha = 0
             }
         }
     }
