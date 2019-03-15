@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E23EAC7223C2DB4005C08EB /* ARCO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E23EAC6223C2DB4005C08EB /* ARCO.ttf */; };
 		6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D44222EF508005472E7 /* ButtonContainer.swift */; };
 		6E266D49222F081A005472E7 /* ButtonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E266D48222F081A005472E7 /* ButtonContainer.xib */; };
 		6E266D4D222F1281005472E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D4C222F1281005472E7 /* MainViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E23EAC6223C2DB4005C08EB /* ARCO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARCO.ttf; sourceTree = "<group>"; };
 		6E266D44222EF508005472E7 /* ButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainer.swift; sourceTree = "<group>"; };
 		6E266D48222F081A005472E7 /* ButtonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContainer.xib; sourceTree = "<group>"; };
 		6E266D4C222F1281005472E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		6EDE15E421F5B19800906312 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E23EAC6223C2DB4005C08EB /* ARCO.ttf */,
 				6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */,
 				6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */,
 				6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */,
+				6E23EAC7223C2DB4005C08EB /* ARCO.ttf in Resources */,
 				6E266D49222F081A005472E7 /* ButtonContainer.xib in Resources */,
 				6E43AAF9223529D3008E7986 /* RTRaleway-Bold.ttf in Resources */,
 				6EA9808221F0E52000583C2E /* LaunchScreen.storyboard in Resources */,

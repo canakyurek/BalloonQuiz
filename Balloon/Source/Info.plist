@@ -20,25 +20,28 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ARCO.ttf</string>
+		<string>RTRaleway-Bold.ttf</string>
+		<string>RTRaleway-Regular.ttf</string>
+		<string>LuckiestGuy-Regular.tff</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>RTRaleway-Bold.ttf</string>
-		<string>RTRaleway-Regular.ttf</string>
-		<string>LuckiestGuy-Regular.tff</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -11,7 +11,6 @@ import UIKit
 enum IconName: String {
     case play = "play"
     case settings = "settings"
-    case replay = "replay"
 }
 class ButtonContainer: UIView {
     

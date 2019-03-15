@@ -23,6 +23,8 @@ class GameViewController: UIViewController {
         }
     }
     
+    var timerCounter = 0.0
+    var timer: Timer!
     var questions: [Question]?
     var currentIndex = 0
     var correctCount = 0
@@ -51,9 +53,27 @@ class GameViewController: UIViewController {
             questions = questions!.shuffled()
             counterLabel.text = "\(currentIndex + 1)/\(questions!.count)"
             setupScene()
-            
+            startTimer()
             askQuestion(at: currentIndex)
         }
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1,
+                                     target: self,
+                                     selector: #selector(self.handleTimer),
+                                     userInfo: nil,
+                                     repeats: true)
+        
+    }
+    
+    func stopTimer() {
+        timer.invalidate()
+    }
+    
+    
+    @objc func handleTimer() {
+        timerCounter += 0.1
     }
     
     func removeState() {
@@ -96,6 +116,8 @@ class GameViewController: UIViewController {
             notificationCenter
                 .post(name: Notification.Name("FalseAnswer"), object: nil)
             sender.backgroundColor = UIColor(named: "red")
+            
+            stopTimer()
             let tag = questions[currentIndex].correctAnswer
             Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
                 guard let `self` = self else { return }
@@ -112,6 +134,7 @@ class GameViewController: UIViewController {
         if segue.identifier == "endGameSegue" {
             let vc = segue.destination as! EndingViewController
             vc.correctCount = currentIndex
+            vc.timerValue = timerCounter
         }
     }
 }
