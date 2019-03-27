@@ -68,8 +68,13 @@ class Scene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         
-        sceneCamera.position = CGPoint(x: balloon.position.x + 150,
-                                       y: balloon.position.y - 100)
+        print(sceneCamera.position.y)
+        if balloon.position.y < 440 {
+            sceneCamera.position.y = 340
+        } else {
+            sceneCamera.position = CGPoint(x: balloon.position.x + 150,
+                                           y: balloon.position.y - 100)
+        }
     }
     
     @objc func applyImpulse() {
@@ -81,8 +86,10 @@ class Scene: SKScene {
     }
     
     func setupFloor() {
-        floor = SKSpriteNode(color: .red, size: CGSize(width: self.frame.width, height: 10))
-        floor.position = CGPoint(x: 0, y: -50)
+        let floorTexture = SKTexture(imageNamed: "ground")
+        floor = SKSpriteNode(texture: floorTexture,
+                             size: CGSize(width: self.frame.width, height: 100))
+        floor.position = CGPoint(x: 0, y: 0)
         floor.anchorPoint = CGPoint.zero
         floor.physicsBody = SKPhysicsBody(rectangleOf: floor.size)
         floor.physicsBody?.categoryBitMask = Category.floor.rawValue
