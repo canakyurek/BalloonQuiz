@@ -142,6 +142,7 @@ class GameViewController: UIViewController {
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
         stopTimer()
+        choiceButtons.forEach({ $0.isEnabled = false })
         guard var questions = questions else { return }
         let tag = questions[currentIndex].correctAnswer
         Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { [weak self] _ in

@@ -13,80 +13,6 @@ ageless**eskimez, yaşlanmaz
 agelong**uzun zaman süren
 agency**acenta, aracılık, acentelik
 agenda**yapılacak işler, gündem, gün tertibi
-agendum**gündem
-coiffure**kuaförlük
-coign**çıkıntılı köşe
-coil**dolanmak, kangal haline gelmek, dolamak, kangal, bobin, tutam, gebeliği önleyici alet
-coin**madeni para, para basmak, (sözcük/vb.) uydurmak, icad etmek
-coinage**madeni para basma, madeni para, (yeni sözcük/vb.) uydurma, icat
-coincide**aynı zamana rastlamak, çatışmak, (düşünce/vb.) uymak, uyuşmak
-coincidence**rastlantı, tesadüf, uygunluk
-coincident**tesadüfi, mutabık
-coincidental**rastlantısal, tesadüfi
-coincidentally**tesadüfen
-dynamotor**dinamotor
-dynastic**hanedana ait
-dynasty**hanedan
-dynatron**dinatron
-dyne**din, güç birimi, kuvvet birimi
-dynode**dinot
-dysenteric**dizanteriye ait
-dysentery**dizanteri
-dysfunction**bir uzvun görevini yapmaması
-dyslexia**yazı okuyamama, yazı körlüğü
-dyslogistic**beğenmeyen, tenkit eden
-dyspepsia**sindirim güçlüğü, hazımsızlık
-dyspeptic**hazımsızlıkla ilgili, hazımsızlık çeken
-dyspnea**nefes darlığı
-dyspnoea**dispne, nefes darlığı
-dysprosium**disprosyum
-ebony**abanoz
-ebulliency**kaynayıp taşma
-ebullient**neşeli, sevinçli, coşkun
-ebullioscopy**ebüliyoskopi, kaynargözleyim
-ebullition**kaynama, taşkınlık, coşkunluk
-eccentric**tuhaf, ayrıksı, eksantrik, dış merkezli, eksantrik kimse
-eccentricity**dışmerkezlilik, tuhaflık, yabansılık, kaçıklık
-ecchymosis**bere, çürük
-ecclesia**cemaat
-echelon**basamak, kademe
-echinoderm**derisidikenliler
-echinus**denizkestanesi, deniz kirpisi
-echo**yankı, birinin ya da bir şeyin benzeri/kopyası, yankı yapmak, yankılanmak, taklit etmek, tekrarlamak
-eclair**parmak şeklinde içi kremalı pasta
-eleutherian**özgürlük bahşeden
-elevate**(aklı ya da ruhu) geliştirmek, yüceltmek, yükseltmek
-elevation**yükselme, terfi, deniz seviyesine oranla yükseklik
-elevator**asansör,götürge
-eleven**onbir
-elevenses**hafif sabah yemeği ve içkisi
-eleventh**onbirinci
-elevon**elevon
-elf**cin, peri
-elfin**peri veya cinlere ait, ele avuca sığmaz
-elfish**cin gibi, yaramaz
-elicit**çıkartmak, ortaya çıkarmak
-elide**kaldırmak, çıkarmak
-eligibility**nitelik, özellik, üstünlük, uygunluk
-eligible**hak sahibi, haklı, uygun, seçilebilir
-Elijah**ilyas peygamber
-eliminant**eliminant, eleç
-eliminate**elemek, atmak, - den kurtarmak, çıkarmak
-elimination**eleme, çıkarma, atma
-elision**sonünlü düşmesi, çıkarma
-elite**seçkin sınıf, seçkinler, elit
-elitism**seçkincilik, elitizm
-elixir**yaşam iksiri, iksir
-elk**büyük boynuzlu iri bir geyik türü, elk
-ell**(boru) dirsek, arşın
-ellipse**elips
-ellipsoid**elipsoit
-elliptical**beyzi, oval, eliptik
-ellipticity**elips şeklinde oluş
-embalmer**mumyalayan kimse
-embalmment**mumyalama
-embank**etrafına/yanına toprak set yapmak
-embankment**toprak set, set, bent
 embargo**ambargo,kadağan,müsadere,ambargo koymak,kadağan etmek,müsadere etmek
 embark**gemiye binmek, gemiye bindirmek, yüklemek
 embarkation**binme, bindirme, yükleme
@@ -116,16 +42,6 @@ funerary**cenaze törenine ait, karanlık, kasvetli
 funereal**mahzun, üzgün, hüzünlü, kasvetli, cenaze törenine yakışır
 funfair**eğlence parkı, lunapark
 fungal**mantarsı, mantar gibi, mantarla ilgili
-fungible**misli
-fungicide**mantar ilacı
-fungoid**mantara benzeyen
-fungous**mantarla ilgili, sünger gibi
-fungus**mantar
-funicular**dağ demiryolu
-funk**büyük korku, dehşet, (nedense) çekinmek, uzak durmak, korkmak, kaçmak
-funky**fanki, çok iyi, müthiş, acayip, o biçim, süper
-funnel**huni, baca, huniden geçirmek, huniden geçirmek, (dar/kalabalık bir yerden) zorlukla geçmek
-gaize**puzolanlı killi kum taşı
 gal**kız
 gala**gala, şenlik
 galactic**galaktik, gökada ile ilgili, samanyoluna ait
@@ -151,12 +67,6 @@ hucklebone**kalça sümüğü,aşık sümüğü
 huckster**seyyar satıcı, madrabaz, seyyar satıcılık yapmak
 huddle**bir araya sıkışmak, birbirine sokulmak, toplanmak, birbirine sokulmuş insanlar, düzensiz ve karışık toplanmış eşya, yığın
 hue**renk
-hued**renkli
-huff**huysuzluk, dargınlık
-huffiness**öfke, kızgınlık
-huffy**kolay öfkelenir, öfkeli, dargın, içerlemiş
-hug**sevgiyle sarılmak, sıkıca kucaklamak, bağrına basmak, yakınından geçmek, sarılma, kucaklama, bağrına basma
-huge**iri,çok büyük,pezevenk,kocaman,büyük
 hugely**çok
 hugeness**irilik, kocamanlık, büyüklük
 huggermugger**gizli, gizli tutmak
@@ -184,15 +94,6 @@ trifle**ıvır zıvır, değersiz şey, meyveli tatlı, bir tür jöle
 trifling**önemsiz,değersiz,lağlağı
 trifoliate**üç yapraklı
 trifolium**yonca
-trifurcate**üçlü çatal, üç yollu
-trigger**tetik, (off ile) başlatmak, neden olmak, yol açmak
-triggerfish**çotira
-triglyph**triglif
-trigonometric**trigonometrik
-trigonometrical**trigonometrik
-trigonometry**trigonometri
-trihedral**üçyüzlü, üç yanlı
-trihedron**üçyüzlü
 trilateral**üçlü, üç yanlı, üç yönlü
 trilinear**üç çizgiden oluşan, üç hatlı
 trilingual**üç dil konuşan
@@ -217,13 +118,6 @@ triose**trioz
 trip**çelme takmak,badalak vurmak,sendeletmek,tökezlemek,sendelemek,takılmak,hata yapmak,gezi,gezinti,kısa yolculuk,takılma,tökezleme,düşme,hata,yanılma,(dil) sürçme,uyuşturucu etkisi,uçuş,trip
 tripartite**üç bölümlü, üç kısımlı
 tripe**işkembe, zırva, saçmalık
-triplane**üçkanatlı uçak
-triple**üç bölümlü, üç misli, üç kat fazla, üç katına çıkmak, üç katına çıkarmak
-triplet**üçüz
-triplex**üç katlı, üç katlı ev
-triplicate**üç benzer bölümden oluşan, üçlü
-tripod**üç ayaklı sehpa, üç ayaklık
-Tripoli**Trablusgarp
 tripper**turist, kastanyola
 tripping**çevik, kıvrak, hafif adımlarla yürüme
 trisaccharide**trisakarit

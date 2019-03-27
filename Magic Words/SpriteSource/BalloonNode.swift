@@ -48,7 +48,7 @@ class BalloonNode: SKSpriteNode {
     }
     
     func refuel() {
-        let moveUpward = SKAction.move(by: CGVector(dx: 0, dy: 200),
+        let moveUpward = SKAction.move(by: CGVector(dx: 0, dy: 400),
                                        duration: 2)
         let zeroRotation = SKAction.rotate(toAngle: 0, duration: 2)
         let group = SKAction.group([moveUpward, zeroRotation])

@@ -78,12 +78,14 @@ class Scene: SKScene {
     }
     
     func addCloudsAtRandomPositions() {
-        for _ in 0..<50 {
+        for i in 0..<80 {
             let cloud = SKSpriteNode(imageNamed: "cloud")
+            cloud.size = CGSize(width: cloud.size.height * 1.5,
+                                height: CGFloat(Int.random(in: 5...100)))
+            let yCoordinate = i == 0 ? 300 : 300 + i + Int(cloud.size.height) * 40
             cloud.position = CGPoint(x: CGFloat(Int.random(in: 0...300)),
-                                     y: CGFloat(Int.random(in: 300...2500)))
-            cloud.size = CGSize(width: cloud.size.height,
-                                height: CGFloat(Int.random(in: 5...30)))
+                                     y: CGFloat(yCoordinate))
+            
             cloud.zPosition = Int.random(in: 0..<2) == 1 ? 1 : -1
             cloud.color = .gray
             self.addChild(cloud)
