@@ -141,6 +141,16 @@ class GameViewController: UIViewController {
 
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
-        performSegue(withIdentifier: "endGameSegue", sender: self)
+        stopTimer()
+        guard var questions = questions else { return }
+        let tag = questions[currentIndex].correctAnswer
+        Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { [weak self] _ in
+            guard let `self` = self else { return }
+            self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
+        }
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
+            guard let `self` = self else { return }
+            self.performSegue(withIdentifier: "endGameSegue", sender: self)
+        }
     }
 }

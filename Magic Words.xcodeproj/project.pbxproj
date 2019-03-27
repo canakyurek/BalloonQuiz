@@ -67,7 +67,7 @@
 		6EA9806B21F0E51E00583C2E = {
 			isa = PBXGroup;
 			children = (
-				6EA9807621F0E51E00583C2E /* Balloon */,
+				6EA9807621F0E51E00583C2E /* Magic Words */,
 				6EA9807521F0E51E00583C2E /* Products */,
 				6EA980B121F13E3800583C2E /* Frameworks */,
 			);
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6EA9807621F0E51E00583C2E /* Balloon */ = {
+		6EA9807621F0E51E00583C2E /* Magic Words */ = {
 			isa = PBXGroup;
 			children = (
 				6EA9807721F0E51E00583C2E /* AppDelegate.swift */,
@@ -93,7 +93,7 @@
 				6E288796223312A500A6E5FE /* DataText.swift */,
 				6EA3F9022233317400BD80FF /* SaveUtil.swift */,
 			);
-			path = Balloon;
+			path = "Magic Words";
 			sourceTree = "<group>";
 		};
 		6EA980B121F13E3800583C2E /* Frameworks */ = {
@@ -389,7 +389,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FGNAKEM79;
-				INFOPLIST_FILE = "$(SRCROOT)/Balloon/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Magic Words/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,7 +410,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FGNAKEM79;
-				INFOPLIST_FILE = "$(SRCROOT)/Balloon/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Magic Words/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

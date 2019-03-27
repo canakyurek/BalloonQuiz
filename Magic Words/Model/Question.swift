@@ -28,7 +28,7 @@ class Question: NSObject, NSCoding {
         
         self.word = aDecoder.decodeObject(forKey: "word") as! String
         self.choices = aDecoder.decodeObject(forKey: "choices") as! [String]
-        self.correctAnswer = aDecoder.decodeInteger(forKey: "correctAnswer") as! Int
+        self.correctAnswer = aDecoder.decodeInteger(forKey: "correctAnswer")
     }
     
     func encode(with aCoder: NSCoder) {

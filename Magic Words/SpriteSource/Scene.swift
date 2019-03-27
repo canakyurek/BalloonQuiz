@@ -59,6 +59,7 @@ class Scene: SKScene {
                       position: CGPoint(x: 40, y: 500),
                       size: CGSize(width: 70, height: 100))
         setupFloor()
+        self.addCloudsAtRandomPositions()
     }
     
     deinit {
@@ -68,12 +69,24 @@ class Scene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
         
-        print(sceneCamera.position.y)
         if balloon.position.y < 440 {
             sceneCamera.position.y = 340
         } else {
             sceneCamera.position = CGPoint(x: balloon.position.x + 150,
                                            y: balloon.position.y - 100)
+        }
+    }
+    
+    func addCloudsAtRandomPositions() {
+        for _ in 0..<50 {
+            let cloud = SKSpriteNode(imageNamed: "cloud")
+            cloud.position = CGPoint(x: CGFloat(Int.random(in: 0...300)),
+                                     y: CGFloat(Int.random(in: 300...2500)))
+            cloud.size = CGSize(width: cloud.size.height,
+                                height: CGFloat(Int.random(in: 5...30)))
+            cloud.zPosition = Int.random(in: 0..<2) == 1 ? 1 : -1
+            cloud.color = .gray
+            self.addChild(cloud)
         }
     }
     
