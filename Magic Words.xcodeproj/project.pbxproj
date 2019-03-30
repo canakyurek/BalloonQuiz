@@ -17,6 +17,7 @@
 		6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8998FD21F1699400AD3A39 /* EndingViewController.swift */; };
 		6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97EDAD22399BE80040924B /* SettingsViewController.swift */; };
 		6EA3F9032233317400BD80FF /* SaveUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3F9022233317400BD80FF /* SaveUtil.swift */; };
+		6EA8D2A5224E36B6005CFD78 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8D2A4224E36B6005CFD78 /* GameKit.framework */; };
 		6EA9807821F0E51E00583C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9807721F0E51E00583C2E /* AppDelegate.swift */; };
 		6EA9807A21F0E51E00583C2E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9807921F0E51E00583C2E /* GameViewController.swift */; };
 		6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA9807B21F0E51E00583C2E /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		6E8998FD21F1699400AD3A39 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		6E97EDAD22399BE80040924B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6EA3F9022233317400BD80FF /* SaveUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtil.swift; sourceTree = "<group>"; };
+		6EA8D2A4224E36B6005CFD78 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6EA9807421F0E51E00583C2E /* Balloon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balloon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA9807721F0E51E00583C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EA9807921F0E51E00583C2E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */,
+				6EA8D2A5224E36B6005CFD78 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 		6EA980B121F13E3800583C2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EA8D2A4224E36B6005CFD78 /* GameKit.framework */,
 				6EA980B221F13E3800583C2E /* SpriteKit.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +191,17 @@
 				TargetAttributes = {
 					6EA9807321F0E51E00583C2E = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -388,18 +403,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FGNAKEM79;
+				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Words/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.canakyurek.balloon;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.magic-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,18 +424,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FGNAKEM79;
+				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Words/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.canakyurek.balloon;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.magic-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
