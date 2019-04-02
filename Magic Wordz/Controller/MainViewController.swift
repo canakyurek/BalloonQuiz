@@ -28,7 +28,6 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
     var dualList = [Question]()
     let buttonAnimationDuration = 0.2
     
@@ -47,14 +46,14 @@ class MainViewController: UIViewController {
     }
     
     func setupButtons() {
-        playButtonContainer.setTitle(as: "Play")
+        playButtonContainer.setTitle(as: "Oyna")
         playButtonContainer.setIconImage(named: .play)
         playButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }
             self.performSegue(withIdentifier: "startGameSegue", sender: self)
         }
         
-        settingsButtonContainer.setTitle(as: "Settings")
+        settingsButtonContainer.setTitle(as: "Ayarlar")
         settingsButtonContainer.setIconImage(named: .settings)
         settingsButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }

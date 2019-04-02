@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
 
 class GameViewController: UIViewController {
@@ -16,6 +17,7 @@ class GameViewController: UIViewController {
     @IBOutlet var choiceButtons: [UIButton]!
     @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
         if let _ = sender.source as? EndingViewController {
@@ -28,6 +30,7 @@ class GameViewController: UIViewController {
     var questions: [Question]?
     var currentIndex = 0
     var correctCount = 0
+    var interstitial: GADInterstitial!
     
     let notificationCenter = NotificationCenter.default
     
@@ -36,6 +39,28 @@ class GameViewController: UIViewController {
         
         if questions != nil {
             configQuestionList()
+        }
+        
+        // FIX: - Test ID used.
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.adSize = kGADAdSizeBanner
+        bannerView.load(GADRequest())
+        
+        interstitial = createAndLoadInterstitial()
+        
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    
+    func showInterstitialAd() {
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
         }
     }
     
@@ -125,7 +150,7 @@ class GameViewController: UIViewController {
             }
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] _ in
                 guard let `self` = self else { return }
-                self.performSegue(withIdentifier: "endGameSegue", sender: self)
+                self.showInterstitialAd()
             }
         }
     }
@@ -153,5 +178,20 @@ extension GameViewController: GameSceneDelegate {
             guard let `self` = self else { return }
             self.performSegue(withIdentifier: "endGameSegue", sender: self)
         }
+    }
+}
+
+extension GameViewController: GADInterstitialDelegate {
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+        self.performSegue(withIdentifier: "endGameSegue", sender: self)
+    }
+    
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        self.performSegue(withIdentifier: "endGameSegue", sender: self)
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        self.performSegue(withIdentifier: "endGameSegue", sender: self)
     }
 }
