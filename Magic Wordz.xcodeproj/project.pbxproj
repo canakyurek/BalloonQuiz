@@ -27,6 +27,7 @@
 		6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA980B221F13E3800583C2E /* SpriteKit.framework */; };
 		6EA980B521F13F8C00583C2E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B421F13F8C00583C2E /* Scene.swift */; };
 		6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B621F1418400583C2E /* BalloonNode.swift */; };
+		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
 		6ECFCDF32253B7FC009198DD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF22253B7FC009198DD /* Player.swift */; };
 		6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF42253B80E009198DD /* BaseModel.swift */; };
 		E29A73F960B7317624664B70 /* Pods_Balloon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */; };
@@ -58,6 +59,7 @@
 		6EA980B421F13F8C00583C2E /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		6EA980B621F1418400583C2E /* BalloonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonNode.swift; sourceTree = "<group>"; };
 		6EAF6F212253BE48001771D1 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
+		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		6ECFCDF22253B7FC009198DD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6ECFCDF42253B80E009198DD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloon.release.xcconfig"; path = "Target Support Files/Pods-Balloon/Pods-Balloon.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 				1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */,
 				E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,6 +137,7 @@
 				6EA9808021F0E52000583C2E /* LaunchScreen.storyboard */,
 				6E266D44222EF508005472E7 /* ButtonContainer.swift */,
 				6E266D48222F081A005472E7 /* ButtonContainer.xib */,
+				6EB900A82254070300F64CC9 /* LeaderboardCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA3F9032233317400BD80FF /* SaveUtil.swift in Sources */,
+				6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */,
 				6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */,
 				6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */,
 				6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */,
@@ -484,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

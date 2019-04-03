@@ -41,11 +41,16 @@ class LeaderboardViewController: UIViewController {
                 let baseData = try! JSONDecoder().decode(BaseModel.self, from: data!)
                 self.players = baseData.msg
                 DispatchQueue.main.async {
+                    self.indicator.stopAnimating()
                     self.tableView.reloadData()
                 }
             }
             task.resume()
         }
+    }
+    
+    @IBAction func dismissTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -56,12 +61,24 @@ extension LeaderboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return players.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let player = players[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardCell",
+                                                 for: indexPath) as! LeaderboardCell
+        if indexPath.row == 3 {
+            let labels = cell.contentView.subviews.compactMap({ $0 as? UILabel })
+            labels.forEach({ $0.textColor = UIColor(named: "lightBlue") })
+        }
+        
+        cell.rankLabel.text = "\(indexPath.row + 1)"
+        cell.usernameLabel.text = player.username
+        cell.scoreLabel.text = "\(player.score)"
+        
+        return cell
     }
 }
 
