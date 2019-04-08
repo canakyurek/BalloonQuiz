@@ -22,7 +22,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ARCO.ttf</string>
+		<string>ARCO.otf</string>
 		<string>RTRaleway-Bold.ttf</string>
 		<string>RTRaleway-Regular.ttf</string>
 		<string>LuckiestGuy-Regular.tff</string>
@@ -38,7 +38,6 @@
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
-    
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
@@ -51,7 +50,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>GADApplicationIdentifier</key>
-    <string>ca-app-pub-6627054048750856~7552616141</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-6627054048750856~7552616141</string>
 </dict>
 </plist>

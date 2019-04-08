@@ -10,26 +10,19 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var buttonsBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var playButtonContainer: ButtonContainer!
-    @IBOutlet weak var settingsButtonContainer: ButtonContainer!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
         didSet {
             activityIndicator.hidesWhenStopped = true
         }
     }
     
-    @IBAction func unwindToMainSegue(_ sender: UIStoryboardSegue) {
-        if let _ = sender.source as? SettingsViewController {
-            UIView.animate(withDuration: buttonAnimationDuration) { [weak self] in
-                guard let `self` = self else { return }
-                self.playButtonContainer.alpha = 1
-                self.settingsButtonContainer.alpha = 1
-            }
-        }
+    @IBAction func settingsTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "settingsSegue", sender: self)
     }
+    
+    @IBAction func unwindToMainSegue(_ sender: UIStoryboardSegue) {}
     var dualList = [Question]()
-    let buttonAnimationDuration = 0.2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +35,6 @@ class MainViewController: UIViewController {
             obtainQuestionList()
         }
         setupButtons()
-        presentButtons()
     }
     
     func setupButtons() {
@@ -52,13 +44,7 @@ class MainViewController: UIViewController {
             guard let `self` = self else { return }
             self.performSegue(withIdentifier: "startGameSegue", sender: self)
         }
-        
-        settingsButtonContainer.setTitle(as: "Ayarlar")
-        settingsButtonContainer.setIconImage(named: .settings)
-        settingsButtonContainer.tapAction = { [weak self] in
-            guard let `self` = self else { return }
-            self.performSegue(withIdentifier: "settingsSegue", sender: self)
-        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,24 +52,7 @@ class MainViewController: UIViewController {
             if let destination = segue.destination as? GameViewController {
                 destination.questions = dualList
             }
-        } else if segue.identifier == "settingsSegue" {
-            UIView.animate(withDuration: buttonAnimationDuration) { [weak self] in
-                guard let `self` = self else { return }
-                self.playButtonContainer.alpha = 0
-                self.settingsButtonContainer.alpha = 0
-            }
         }
-    }
-    
-    private func presentButtons() {
-        UIView.animate(withDuration: 5,
-                       delay: 0,
-                       usingSpringWithDamping: 0.4,
-                       initialSpringVelocity: 0.2,
-                       options: .curveEaseIn,
-                       animations: {
-                        self.buttonsBottomConstraint.constant = 400
-        }, completion: nil)
     }
 
     private func obtainQuestionList() {

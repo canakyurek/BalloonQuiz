@@ -15,6 +15,7 @@
 		6E43AAF9223529D3008E7986 /* RTRaleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */; };
 		6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */; };
 		6E731FC0224FC0440017C04B /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */; };
+		6E775CFA225BA8F600F7D948 /* ARCO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E775CF9225BA8F600F7D948 /* ARCO.otf */; };
 		6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8998FD21F1699400AD3A39 /* EndingViewController.swift */; };
 		6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97EDAD22399BE80040924B /* SettingsViewController.swift */; };
 		6EA3F9032233317400BD80FF /* SaveUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3F9022233317400BD80FF /* SaveUtil.swift */; };
@@ -44,6 +45,7 @@
 		6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Bold.ttf"; sourceTree = "<group>"; };
 		6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Regular.ttf"; sourceTree = "<group>"; };
 		6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		6E775CF9225BA8F600F7D948 /* ARCO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARCO.otf; sourceTree = "<group>"; };
 		6E8998FD21F1699400AD3A39 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
 		6E97EDAD22399BE80040924B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6EA3F9022233317400BD80FF /* SaveUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtil.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		6EDE15E421F5B19800906312 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E775CF9225BA8F600F7D948 /* ARCO.otf */,
 				6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */,
 				6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */,
 				6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */,
@@ -260,6 +263,7 @@
 				6E266D49222F081A005472E7 /* ButtonContainer.xib in Resources */,
 				6E43AAF9223529D3008E7986 /* RTRaleway-Bold.ttf in Resources */,
 				6EA9808221F0E52000583C2E /* LaunchScreen.storyboard in Resources */,
+				6E775CFA225BA8F600F7D948 /* ARCO.otf in Resources */,
 				6EA9807F21F0E52000583C2E /* Assets.xcassets in Resources */,
 				6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */,
 				6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */,
@@ -487,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
