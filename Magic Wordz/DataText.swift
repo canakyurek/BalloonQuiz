@@ -14,15 +14,6 @@ agelong**uzun zaman süren
 agency**acenta, aracılık, acentelik
 agenda**yapılacak işler, gündem, gün tertibi
 embargo**ambargo,kadağan,müsadere,ambargo koymak,kadağan etmek,müsadere etmek
-embark**gemiye binmek, gemiye bindirmek, yüklemek
-embarkation**binme, bindirme, yükleme
-embarrass**sıkmak, rahatsız etmek, bozmak, şaşırtmak, utandırmak, mahcup etmek
-embarrassed**utanmış, mahcup
-embarrassing**utandırıcı, mahçup edici, can sıkıcı, huzursuz edici
-embarrassment**utanma, mahcubiyet, para sıkıntısı
-embassy**elçilik
-embattle**meydan savaşına hazırlamak, mazgal yapmak
-embattled**savaş halinde, sıkışmış
 embed**iyice yerleştirmek, oturtmak, sokmak, gömmek
 embedded**yataklanmış, gömülmüş, yerleşmiş
 embedding**yerleştirme
@@ -32,14 +23,6 @@ functioning**işler durumda
 functor**fonktör, izleç
 fund**sermaye, para, fon, stok, birikim, para sağlamak, finanse etmek
 fundament**temel, taban, makat, kıç
-fundamental**esas,ana,belli başlı,temel,en gerekli,önemli,kural,temel ilke,esas kanun
-fundamentalism**aşırı tutuculuk
-fundamentally**esaslı olarak, esas itibariyle
-funding**kısa vadeli borcun uzun vadeli borca dönüştürülmes
-fundus**gözdibi
-funeral**cenaze töreni, gömme, cenaze alayı
-funerary**cenaze törenine ait, karanlık, kasvetli
-funereal**mahzun, üzgün, hüzünlü, kasvetli, cenaze törenine yakışır
 funfair**eğlence parkı, lunapark
 fungal**mantarsı, mantar gibi, mantarla ilgili
 gal**kız
@@ -51,10 +34,6 @@ gale**sert rüzgâr, bora, ani kahkaha
 galena**galen, kükürt kurşunu
 galimatias**saçma boş laf
 galingale**kulunç otu
-galipot**bir tür çamsakızı
-gall**safra, öd, kin, nefret, kabalık, küstahlık, sürtünme sonucu oluşan yara
-gallant**yürekli, yiğit, cesur, güzel, görkemli, (erkek) kibar, şık
-gallantry**kadınlara karşı incelik, kibarlık, yüreklilik, yiğitlik, cesaret, kahramanlık
 galleon**kalyon
 gallery**galeri
 galley**kadırga, gemi mutfağı
@@ -79,47 +58,59 @@ huller**kabuk soyma makinesi
 hum**vızıldamak, (şarkı) mırıldanmak, canlanmak, hızlanmak
 human**insana ilişkin, insani, insan ..., insancıl, insanca, insan gibi, insani, insan
 trickster**hileci, düzenbaz, üçkâğıtçı, dalavereci, kazıkçı
-tricky**ustalık ve dikkat isteyen, nazik, ince, hassas, kurnaz, uyanık, üçkâğıtçı, düzenbaz
-triclinic**triklinik, üç ayrı mihverli (kristal)
-tricolour**üç renkli
-tricorn**üç köşeli şapka
-tricot**triko
-tricuspid**triküspit, üçlü kapakçık
-tricycle**üç tekerlekli bisiklet
-tricyclic**üçhalkalı, trisiklik
-trident**üç dişli çatal, üç çatallı zıpkın
-tried**güvenilir, denenmiş
-triennial**üç yılda bir olan
-trifle**ıvır zıvır, değersiz şey, meyveli tatlı, bir tür jöle
-trifling**önemsiz,değersiz,lağlağı
-trifoliate**üç yapraklı
-trifolium**yonca
-trilateral**üçlü, üç yanlı, üç yönlü
-trilinear**üç çizgiden oluşan, üç hatlı
-trilingual**üç dil konuşan
-triliteral**üç harfli kelime
-trill**ses titremesi, tril
-trilled**titrek (ses için)
-trillion**trilyon
-trilobate**üç loplu, üç kısımlı
 trilogy**triloji
 trim**(off ile) kesip düzeltmek, budamak, kırkmak, (with ile) süslemek, kısmak, azaltmak, yenmek, (gemi/uçak) dengelemek, dengelenmek, düzenli, derli toplu, kesme, kırkma, intizam, düzen, form, kondisyon
 trimester**üç aylık öğrenim süresi
 trimmer**fletner ayarlayıcısı, süsleyen kimse, yağcı
 trimming**süs, garnitür, kesilmiş parça
 trimorphism**trimorfizm, üçbiçimlilik
-trine**üç kat, üçlü, üç misli
-trinity**üçlü (birlik)
-trinket**incik boncuk, değersiz ziynet
-trinomial**üçterimli
-trio**üçlü, üç kişilik türküm, trio, üçlü
-triode**triyot
-triose**trioz
-trip**çelme takmak,badalak vurmak,sendeletmek,tökezlemek,sendelemek,takılmak,hata yapmak,gezi,gezinti,kısa yolculuk,takılma,tökezleme,düşme,hata,yanılma,(dil) sürçme,uyuşturucu etkisi,uçuş,trip
-tripartite**üç bölümlü, üç kısımlı
-tripe**işkembe, zırva, saçmalık
-tripper**turist, kastanyola
-tripping**çevik, kıvrak, hafif adımlarla yürüme
-trisaccharide**trisakarit
-trisect**üç eşit parçaya bölmek, üçe bölmek
+merchandise**ticaret eşyası, mal
+merchandising**satışı geliştirme yöntemi
+merchant**tüccar, tacir
+merchantable**satılabilir, sürümlü
+microbial**mikrobik
+microbic**mikropla ilgili, mikrobik
+microbiology**mikrobiyoloji
+microcephalic**mikrosefal
+microcephalous**çok küçük başlı
+microchemical**mikrokimyasal
+moonwalk**ayda yürüyüş
+moony**ayla ilgili, dalgın, kaçık, deli
+moor**çalılık arazi, fundalık, arazi, kır, palamarla bağlamak
+moorage**demirleme vergini, demir atma
+mooring**demirleme, bağlama
+needlework**iğne işi, işleme
+needs**ister istemez
+needy**yoksul, fakir
+natty**şık, zarif, iyi giyimli
+natural**doğaya özgü, doğal, olağan, normal, doğal, doğuştan, doğuştan yetenekli kişi, başarılı kişi, (bir işe) çok uygun kişi/şey
+naturalism**doğalcılık, doğacılık
+naturalist**doğa bilimleri uzmanı, natüralist, doğalcı
+naturalization**yurttaşlığa kabul
+paramecium**terliksihayvan, paramesyum
+paramedic**yardımcı hekimlik hizmeti veren kişi
+parameter**parametre, katsayı
+parametric**parametrik
+paramilitary**askeri nitelikli
+repository**depo, ambar, ...hakkında kendisine özel olarak bilgi verilen kimse
+repossess**yeniden sahip olmak, elde etmek
+repp**n rips
+reprehend**azarlamak, paylamak, suçlamak
+reprehensible**suçlanmayı/azarlanmayı hakeden
+sanity**akıl sağlığı
+sanserif**düz harfler
+sap**besisuyu, özsu, canlılık, dirilik, güç, aptal, lağım, sıçanyolu, sıçanyolu kazmak, temelinden yıkmak, altını kazmak, çökertmek, azaltmak, zayıflatmak
+sapid**lezzetli, çekici, sevimli, tatlı
+sapidity**çeşni, tat, tatlılık
+zoo**hayvanat bahçesi
+zoological**hayvanbilimsel, zoolojik
+zoologist**hayvanbilimci, zoolog
+zoology**hayvanbilim, zooloji
+zoom**vınlamak, (uçak) gürültü ile dikine yükselmek, zum yapmak
+zucchini**kabak
+zeal**istek, heves, çaba, gayret, şevk, coşkunluk, hararet
+zealot**bağnaz, fanatik
+zealous**gayretli, istekli, şevkli, hararetli, coşkun
+zebra**zebra
+zebu**hörgüçlü inek, zebu
 """

@@ -51,8 +51,12 @@ class Scene: SKScene {
                                        name: NSNotification.Name("CorrectAnswer"),
                                        object: nil)
         notificationCenter.addObserver(self,
-                                       selector: #selector(self.knockOffTheBalloon),
+                                       selector: #selector(self.lowerTheBalloon),
                                        name: NSNotification.Name("FalseAnswer"),
+                                       object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(self.knockOffTheBalloon),
+                                       name: NSNotification.Name("EndGame"),
                                        object: nil)
         setCamera()
         balloon.spawn(on: self,
@@ -98,6 +102,10 @@ class Scene: SKScene {
     
     @objc func knockOffTheBalloon() {
         balloon.moveToFloor()
+    }
+    
+    @objc func lowerTheBalloon() {
+        balloon.lower()
     }
     
     func setupFloor() {

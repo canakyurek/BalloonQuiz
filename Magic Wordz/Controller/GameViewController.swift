@@ -13,18 +13,35 @@ import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
+    // MARK: - Outlet connections
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var choiceButtons: [UIButton]!
     @IBOutlet weak var sceneView: SKView!
-    @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var pointView: PointsComponent!
+    @IBOutlet weak var healthView: HealthComponent!
     
-    @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
-        if let _ = sender.source as? EndingViewController {
-            configQuestionList()
+    // MARK: - Variables
+    var falseCounter = 0
+    
+    lazy var blurredView: UIView = {
+        let blurredView = UIVisualEffectView(frame: CGRect(x: 0,
+                                               y: 0,
+                                               width: self.view.frame.width,
+                                               height: self.view.frame.height))
+        let blurEffect = UIBlurEffect(style: .regular)
+        blurredView.effect = blurEffect
+        
+        return blurredView
+    }()
+    
+    var points = 0 {
+        didSet {
+            if points < 0 { points = 0 }
+            setScoreLabel()
         }
     }
-    
     var timerCounter = 0.0
     var timer: Timer!
     var questions: [Question]?
@@ -32,7 +49,11 @@ class GameViewController: UIViewController {
     var correctCount = 0
     var interstitial: GADInterstitial!
     
+    // MARK: - Constants
+    
     let notificationCenter = NotificationCenter.default
+    
+    // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +69,23 @@ class GameViewController: UIViewController {
         bannerView.load(GADRequest())
         
         interstitial = createAndLoadInterstitial()
-        
+        notificationCenter.addObserver(self, selector: #selector(self.pauseGame), name: UIApplication.willResignActiveNotification, object: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "endGameSegue" {
+            let vc = segue.destination as! EndingViewController
+            vc.correctCount = currentIndex
+            vc.score = points
+            vc.timerValue = timerCounter
+        }
+    }
+    
+    func setScoreLabel() {
+         pointView.pointLabel.text = "\(points)"
+    }
+    
+    // MARK: - Ad methods
     
     func createAndLoadInterstitial() -> GADInterstitial {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
@@ -64,23 +100,14 @@ class GameViewController: UIViewController {
         }
     }
     
+    // MARK: - Scene methods
+    
     func setupScene() {
         let gameScene = Scene(delegate: self)
         sceneView.backgroundColor = SKColor.clear
         sceneView.ignoresSiblingOrder = true
         gameScene.size = sceneView.bounds.size
         sceneView.presentScene(gameScene)
-    }
-    
-    func configQuestionList() {
-        if questions != nil {
-            currentIndex = 0
-            questions = questions!.shuffled()
-            counterLabel.text = "\(currentIndex + 1)/\(questions!.count)"
-            setupScene()
-            startTimer()
-            askQuestion(at: currentIndex)
-        }
     }
     
     func startTimer() {
@@ -96,32 +123,46 @@ class GameViewController: UIViewController {
         timer.invalidate()
     }
     
-    
     @objc func handleTimer() {
         timerCounter += 0.1
     }
-    
-    func removeState() {
-        for button in choiceButtons {
-            button.backgroundColor = UIColor(named: "blue")
-            button.isEnabled = true
-        }
-    }
-    
+   
     func askQuestion(at index: Int) {
         guard let questions = questions else { return }
         if questions.count > currentIndex {
-            counterLabel.text = "\(currentIndex + 1)/\(questions.count + 1)"
             removeState()
             questionLabel.text = questions[index].word
             for (i, button) in choiceButtons.enumerated() {
-                button.setTitle(questions[index].choices[i], for: .normal)
+                button.setTitle(questions[index].choices[i].uppercased(), for: .normal)
             }
         }
         else {
             performSegue(withIdentifier: "endGameSegue", sender: self)
         }
     }
+    
+    func configQuestionList() {
+        if questions != nil {
+            currentIndex = 0
+            falseCounter = 0
+            points = 0
+            healthView.reloadView()
+            questions = questions!.shuffled()
+            setupScene()
+            startTimer()
+            askQuestion(at: currentIndex)
+        }
+    }
+    
+    func removeState() {
+        for button in choiceButtons {
+            button.backgroundColor = UIColor(named: "secondaryButtonColor")
+            button.setTitleColor(.darkGray, for: .normal)
+            button.isEnabled = true
+        }
+    }
+    
+    // MARK: - Action methods
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         guard var questions = questions else { return }
@@ -130,39 +171,83 @@ class GameViewController: UIViewController {
             notificationCenter
                 .post(name: Notification.Name("CorrectAnswer"), object: nil)
             sender.backgroundColor = UIColor(named: "green")
+            sender.setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
             questions.remove(at: currentIndex)
             currentIndex += 1
+            points += 10
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] _ in
                 guard let `self` = self else { return }
                 self.askQuestion(at: self.currentIndex)
             }
             
         } else {
-            notificationCenter
-                .post(name: Notification.Name("FalseAnswer"), object: nil)
+            falseCounter += 1
+            let userInfo = ["falseCount": falseCounter]
+            notificationCenter.post(name: Notification.Name("FalseAnswer"),
+                                    object: nil,
+                                    userInfo: userInfo)
+            self.view.layoutIfNeeded()
             sender.backgroundColor = UIColor(named: "red")
-            
-            stopTimer()
+            sender.setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
             let tag = questions[currentIndex].correctAnswer
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
-                guard let `self` = self else { return }
-                self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
-            }
-            Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self] _ in
-                guard let `self` = self else { return }
-                self.showInterstitialAd()
+            self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
+            (self.view.viewWithTag(tag) as! UIButton)
+                .setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
+            points -= 10
+            if falseCounter < 4 {
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                    questions.remove(at: self.currentIndex)
+                    self.currentIndex += 1
+                    self.askQuestion(at: self.currentIndex)
+                }
+            } else {
+                endGame()
             }
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "endGameSegue" {
-            let vc = segue.destination as! EndingViewController
-            vc.correctCount = currentIndex
-            vc.timerValue = timerCounter
+    func endGame() {
+        guard var questions = questions else { return }
+        stopTimer()
+        let tag = questions[currentIndex].correctAnswer
+        self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
+        (self.view.viewWithTag(tag) as! UIButton)
+            .setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
+        notificationCenter.post(name: Notification.Name("EndGame"), object: nil)
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+            self.balloonDidCrash()
         }
     }
+    
+    @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
+        if sender.identifier == "replaySegue" {
+            configQuestionList()
+        } else if sender.identifier == "resumeSegue" {
+            blurredView.isHidden = true
+            sceneView.isPaused = false
+        } else if sender.identifier == "restartSegue" {
+            blurredView.isHidden = true
+            sceneView.isPaused = false
+            configQuestionList()
+        }
+    }
+    
+    @IBAction func pauseTapped(_ sender: UIButton) {
+        pauseGame()
+    }
+    
+    @objc func pauseGame() {
+        sceneView.isPaused = true
+        if self.view.subviews.contains(blurredView) {
+            blurredView.isHidden = false
+        } else {
+            self.view.addSubview(blurredView)
+        }
+        performSegue(withIdentifier: "pauseSegue", sender: nil)
+    }
 }
+
+// MARK: - GameSceneDelegate methods
 
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
@@ -173,6 +258,8 @@ extension GameViewController: GameSceneDelegate {
         Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { [weak self] _ in
             guard let `self` = self else { return }
             self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
+            (self.view.viewWithTag(tag) as! UIButton)
+                .setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
         }
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
             guard let `self` = self else { return }
@@ -180,6 +267,8 @@ extension GameViewController: GameSceneDelegate {
         }
     }
 }
+
+// MARK: - GADInterstitialDelegate methods
 
 extension GameViewController: GADInterstitialDelegate {
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {

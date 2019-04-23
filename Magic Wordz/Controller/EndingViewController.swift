@@ -14,7 +14,7 @@ class EndingViewController: UIViewController {
     var correctCount = 0
     var timerValue = 0.0
     var highscoreValue = 0
-    
+    var score = 0
     let leaderBoardID = "highscores"
     
     
@@ -28,14 +28,14 @@ class EndingViewController: UIViewController {
     }
     
     @IBAction func replayTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "replayGameSegue", sender: self)
+        self.performSegue(withIdentifier: "replaySegue", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         correctCountLabel.text = "\(correctCount)"
-        scoreLabel.text = "\(correctCount)"
+        scoreLabel.text = "\(score)"
         timerLabel.text = String(format: "%.1f", timerValue)
     }
     
@@ -47,8 +47,8 @@ class EndingViewController: UIViewController {
     
     func setHighscoreText() {
         highscoreValue = UserDefaults.standard.integer(forKey: "highscore")
-        if correctCount > highscoreValue {
-            highscoreValue = correctCount
+        if score > highscoreValue {
+            highscoreValue = score
             UserDefaults.standard.set(highscoreValue, forKey: "highscore")
         }
         highscoreLabel.text = "\(highscoreValue)"

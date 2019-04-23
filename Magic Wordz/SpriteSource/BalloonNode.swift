@@ -56,7 +56,7 @@ class BalloonNode: SKSpriteNode {
     }
     
     func moveToFloor() {
-        let point = CGPoint(x: self.position.x, y: 100)
+        let point = CGPoint(x: self.position.x, y: 90)
         self.physicsBody = nil
         let moveToFloor = SKAction.move(to: point, duration: 1)
         // Set the speed zero when the balloon hits the floor
@@ -65,6 +65,14 @@ class BalloonNode: SKSpriteNode {
             guard let `self` = self else { return }
             self.speed = 0
         }
+    }
+    
+    func lower() {
+        let point = CGPoint(x: self.position.x, y: self.position.y - 180)
+        let moveAction = SKAction.move(to: point, duration: 1)
+        let zeroRotationAction = SKAction.rotate(toAngle: 0, duration: 1)
+        let group = SKAction.group([moveAction, zeroRotationAction])
+        run(group)
     }
     
     func crash() {
