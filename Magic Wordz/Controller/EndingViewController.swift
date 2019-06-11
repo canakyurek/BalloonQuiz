@@ -21,9 +21,10 @@ class EndingViewController: UIViewController {
     var corrects: [Answer]!
     var wrongs: [Answer]!
     
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var correctCountLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: CountingLabel!
     @IBOutlet weak var highscoreLabel: UILabel! {
         didSet {
             setHighscoreText()
@@ -38,11 +39,21 @@ class EndingViewController: UIViewController {
         self.performSegue(withIdentifier: "wordListSegue", sender: self)
     }
     
+    func setupAnimation() {
+        let animation = Animation.named("confetti")
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        animationView.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         correctCountLabel.text = "\(correctCount)"
-        scoreLabel.text = "\(score)"
+        scoreLabel.countFromZero(to: Float(score), duration: .brisk)
+        scoreLabel.completion = {
+            self.setupAnimation()
+        }
         timerLabel.text = String(format: "%.1f", timerValue)
     }
     

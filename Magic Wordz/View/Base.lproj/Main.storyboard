@@ -509,7 +509,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-pk-igr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-pk-igr" customClass="CountingLabel" customModule="Balloon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="101" width="343" height="90"/>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="90"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -656,6 +656,11 @@
                                     <constraint firstAttribute="width" secondItem="iyl-tw-HzQ" secondAttribute="height" multiplier="64:53" id="dsO-Mn-asD"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8T-mJ-Ymn" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="51" y="20" width="273" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0078431372550000003" green="0.71764705880000002" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -706,6 +711,7 @@
                         <viewLayoutGuide key="safeArea" id="TCg-CX-bqC"/>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="i8T-mJ-Ymn" id="D7v-6y-pFb"/>
                         <outlet property="correctCountLabel" destination="eW4-yd-Xtn" id="qKa-Gu-2Pg"/>
                         <outlet property="highscoreLabel" destination="ZCu-ZJ-B2p" id="rC2-kP-U0w"/>
                         <outlet property="scoreLabel" destination="Q4a-pk-igr" id="kdP-nE-KS1"/>
