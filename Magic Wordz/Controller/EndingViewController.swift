@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import Lottie
 
 class EndingViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class EndingViewController: UIViewController {
     var score = 0
     let leaderBoardID = "highscores"
     
+    var corrects: [Answer]!
+    var wrongs: [Answer]!
     
     @IBOutlet weak var correctCountLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
@@ -31,6 +34,10 @@ class EndingViewController: UIViewController {
         self.performSegue(withIdentifier: "replaySegue", sender: self)
     }
     
+    @IBAction func wordListTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "wordListSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +50,15 @@ class EndingViewController: UIViewController {
         super.viewDidAppear(animated)
         
         postHighscore()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "wordListSegue" {
+            let destination = segue.destination as! WordListViewController
+            destination.corrects = corrects
+            destination.wrongs = wrongs
+        }
+        
     }
     
     func setHighscoreText() {

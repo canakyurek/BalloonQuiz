@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 import GoogleMobileAds
-
+import Instructions
 
 class GameViewController: UIViewController {
 
@@ -21,6 +21,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var pointView: PointsComponent!
     @IBOutlet weak var healthView: HealthComponent!
+    @IBOutlet weak var pauseButton: UIButton!
+    
+    @IBOutlet weak var balloonCorridorView: UIView!
+    @IBOutlet weak var choiceContainer: UIStackView!
     
     // MARK: - Variables
     var falseCounter = 0
@@ -48,10 +52,16 @@ class GameViewController: UIViewController {
     var currentIndex = 0
     var correctCount = 0
     var interstitial: GADInterstitial!
+    var balloonFrame: CGRect!
+    
+    var corrects = [Answer]()
+    var wrongs = [Answer]()
     
     // MARK: - Constants
     
     let notificationCenter = NotificationCenter.default
+    var coachMarksController: CoachMarksController?
+    let pointOfInterest = UIView()
     
     // MARK: - Lifecycle methods
     
@@ -69,7 +79,48 @@ class GameViewController: UIViewController {
         bannerView.load(GADRequest())
         
         interstitial = createAndLoadInterstitial()
-        notificationCenter.addObserver(self, selector: #selector(self.pauseGame), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(self.pauseGame),
+                                       name: UIApplication.willResignActiveNotification,
+                                       object: nil)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Check if the app launched for the first time.
+        // If so, present coach mark.
+        if UserDefaults.standard.bool(forKey: "hasLaunchedOnce") == false {
+            UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
+            setupCoachMarks()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.pauseButton.isEnabled = true
+    }
+    
+    func setupCoachMarks() {
+        coachMarksController = CoachMarksController()
+        self.coachMarksController!.dataSource = self
+        self.coachMarksController!.delegate = self
+        let skipView = CoachMarkSkipDefaultView()
+        skipView.setTitle("Atla", for: .normal)
+        self.coachMarksController!.skipView = skipView
+        self.coachMarksController!.overlay.allowTap = true
+        self.coachMarksController!.start(in: .window(over: self))
+        sceneView.isPaused = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let controller = coachMarksController {
+            controller.stop(immediately: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,6 +129,8 @@ class GameViewController: UIViewController {
             vc.correctCount = currentIndex
             vc.score = points
             vc.timerValue = timerCounter
+            vc.corrects = corrects
+            vc.wrongs = wrongs
         }
     }
     
@@ -172,6 +225,11 @@ class GameViewController: UIViewController {
                 .post(name: Notification.Name("CorrectAnswer"), object: nil)
             sender.backgroundColor = UIColor(named: "green")
             sender.setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
+            
+            let answer = Answer(originalWord: questions[currentIndex].word,
+                                correctAnswer: sender.currentTitle!)
+            corrects.append(answer)
+            
             questions.remove(at: currentIndex)
             currentIndex += 1
             points += 10
@@ -189,12 +247,16 @@ class GameViewController: UIViewController {
             self.view.layoutIfNeeded()
             sender.backgroundColor = UIColor(named: "red")
             sender.setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
+            
+            let answer = Answer(originalWord: questions[currentIndex].word,
+                                correctAnswer: sender.currentTitle!)
+            wrongs.append(answer)
             let tag = questions[currentIndex].correctAnswer
             self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
             (self.view.viewWithTag(tag) as! UIButton)
                 .setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
             points -= 10
-            if falseCounter < 4 {
+            if falseCounter < 3 {
                 Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
                     questions.remove(at: self.currentIndex)
                     self.currentIndex += 1
@@ -253,6 +315,7 @@ extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
         stopTimer()
         choiceButtons.forEach({ $0.isEnabled = false })
+        self.pauseButton.isEnabled = false
         guard var questions = questions else { return }
         let tag = questions[currentIndex].correctAnswer
         Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { [weak self] _ in
@@ -283,4 +346,7 @@ extension GameViewController: GADInterstitialDelegate {
     func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
         self.performSegue(withIdentifier: "endGameSegue", sender: self)
     }
+    
 }
+
+

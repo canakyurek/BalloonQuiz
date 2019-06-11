@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
             activityIndicator.hidesWhenStopped = true
         }
     }
+    @IBOutlet weak var personalHighScoreLabel: UILabel!
     
     @IBAction func settingsTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "settingsSegue", sender: self)
@@ -35,6 +36,22 @@ class MainViewController: UIViewController {
             obtainQuestionList()
         }
         setupButtons()
+        checkForPersonalHighscore()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkForPersonalHighscore()
+    }
+    
+    func checkForPersonalHighscore() {
+        let highscore = UserDefaults.standard.integer(forKey: "highscore")
+        if  highscore != 0 {
+            personalHighScoreLabel.text = "Kisisel rekor: \(highscore)"
+        } else {
+            personalHighScoreLabel.isHidden = true
+        }
     }
     
     func setupButtons() {

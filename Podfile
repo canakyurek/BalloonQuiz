@@ -7,5 +7,6 @@ target 'Balloon' do
 
   # Pods for Balloon
   pod 'Google-Mobile-Ads-SDK'
-
+  pod 'Instructions', '~> 1.3.0'
+  pod 'lottie-ios'
 end

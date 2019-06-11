@@ -30,7 +30,7 @@ class LeaderboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getLeaderboard()
+     //   getLeaderboard()
     }
     
     func getLeaderboard() {
