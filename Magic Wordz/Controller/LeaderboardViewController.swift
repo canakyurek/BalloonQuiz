@@ -12,7 +12,8 @@ import GameKit
 class LeaderboardViewController: UIViewController {
 
     var score = 0
-    var players = [Player]()
+    var dataList = [GKScore]()
+    let leaderboardID = "highscores"
     
     @IBOutlet weak var indicator: UIActivityIndicatorView! {
         didSet {
@@ -27,25 +28,28 @@ class LeaderboardViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-     //   getLeaderboard()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        obtainLeaderboard()
     }
     
-    func getLeaderboard() {
-        let path = "https://magic-wordz.herokuapp.com/players"
-        if let url = URL(string: path) {
-            let request = URLRequest(url: url)
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                let baseData = try! JSONDecoder().decode(BaseModel.self, from: data!)
-                self.players = baseData.msg
+    func obtainLeaderboard() {
+        let leaderboardRequest = GKLeaderboard()
+        leaderboardRequest.playerScope = .global
+        leaderboardRequest.timeScope = .allTime
+        leaderboardRequest.identifier = leaderboardID
+        leaderboardRequest.loadScores { (scores, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                guard let scores = scores else { return }
                 DispatchQueue.main.async {
+                    self.dataList = scores
                     self.indicator.stopAnimating()
                     self.tableView.reloadData()
                 }
             }
-            task.resume()
         }
     }
     
@@ -61,29 +65,19 @@ extension LeaderboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return dataList.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let player = players[indexPath.row]
+        let data = dataList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardCell",
                                                  for: indexPath) as! LeaderboardCell
-        if indexPath.row == 3 {
-            let labels = cell.contentView.subviews.compactMap({ $0 as? UILabel })
-            labels.forEach({ $0.textColor = UIColor(named: "lightBlue") })
-        }
         
         cell.rankLabel.text = "\(indexPath.row + 1)"
-        cell.usernameLabel.text = player.username
-        cell.scoreLabel.text = "\(player.score)"
+        cell.usernameLabel.text = data.player.alias
+        cell.scoreLabel.text = data.formattedValue ?? "\(data.value)"
         
         return cell
-    }
-}
-
-extension LeaderboardViewController: GKGameCenterControllerDelegate {
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }

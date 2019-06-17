@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 import GoogleMobileAds
 import Instructions
+import AVFoundation
 
 class GameViewController: UIViewController {
 
@@ -57,6 +58,21 @@ class GameViewController: UIViewController {
     var corrects = [Answer]()
     var wrongs = [Answer]()
     
+    lazy var musicPlayer: AVAudioPlayer? = {
+        var player: AVAudioPlayer?
+        do {
+            if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
+                let url = URL(string: path) {
+                player = try AVAudioPlayer(contentsOf: url)
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.numberOfLoops = -1
+        
+        return player
+    }()
+    
     // MARK: - Constants
     
     let notificationCenter = NotificationCenter.default
@@ -83,7 +99,6 @@ class GameViewController: UIViewController {
                                        selector: #selector(self.pauseGame),
                                        name: UIApplication.willResignActiveNotification,
                                        object: nil)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -95,6 +110,9 @@ class GameViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
             setupCoachMarks()
         }
+        DispatchQueue.global().async {
+            self.musicPlayer?.play()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,6 +120,8 @@ class GameViewController: UIViewController {
         
         self.pauseButton.isEnabled = true
     }
+    
+
     
     func setupCoachMarks() {
         coachMarksController = CoachMarksController()
@@ -121,6 +141,8 @@ class GameViewController: UIViewController {
         if let controller = coachMarksController {
             controller.stop(immediately: true)
         }
+        
+        musicPlayer?.stop()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -282,6 +304,10 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
+        DispatchQueue.global().async {
+            self.musicPlayer?.play()
+        }
+        
         if sender.identifier == "replaySegue" {
             configQuestionList()
         } else if sender.identifier == "resumeSegue" {
@@ -299,6 +325,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func pauseGame() {
+        musicPlayer?.stop()
         sceneView.isPaused = true
         if self.view.subviews.contains(blurredView) {
             blurredView.isHidden = false

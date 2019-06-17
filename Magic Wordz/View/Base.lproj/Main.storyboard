@@ -360,27 +360,8 @@
                                             <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="Uot-CG-O7i"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-l4-S1P">
-                                        <rect key="frame" x="28" y="65" width="253" height="40"/>
-                                        <color key="backgroundColor" name="green"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Da5-qo-vxx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                        <state key="normal" title="GİRİŞ YAP">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="removeAdsTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="NAE-1Z-OKz"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI7-eb-Tre">
-                                        <rect key="frame" x="28" y="113" width="253" height="40"/>
+                                        <rect key="frame" x="28" y="78" width="253" height="40"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="l7E-td-8Ua"/>
@@ -396,7 +377,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-sE-6ZY">
-                                        <rect key="frame" x="28" y="161" width="253" height="40"/>
+                                        <rect key="frame" x="28" y="126" width="253" height="40"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="vbq-CS-oCW"/>
@@ -412,7 +393,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsA-qG-G0o">
-                                        <rect key="frame" x="28" y="209" width="253" height="40"/>
+                                        <rect key="frame" x="28" y="174" width="253" height="40"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="dbR-se-oSe"/>
@@ -428,7 +409,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-WP-tdw">
-                                        <rect key="frame" x="28" y="257" width="253" height="40"/>
+                                        <rect key="frame" x="28" y="222" width="253" height="40"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MfN-yc-CS7"/>
@@ -451,22 +432,18 @@
                                     <constraint firstItem="SsA-qG-G0o" firstAttribute="top" secondItem="Mgi-sE-6ZY" secondAttribute="bottom" constant="8" id="3kB-7f-7HN"/>
                                     <constraint firstAttribute="trailing" secondItem="SsA-qG-G0o" secondAttribute="trailing" constant="28" id="5ez-ZK-qqx"/>
                                     <constraint firstAttribute="trailing" secondItem="2G1-pd-f25" secondAttribute="trailing" constant="28" id="9Xe-ua-0b4"/>
-                                    <constraint firstAttribute="bottom" secondItem="8Wc-WP-tdw" secondAttribute="bottom" constant="8" id="CFE-hh-XLY"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Wc-WP-tdw" secondAttribute="bottom" constant="43" id="CFE-hh-XLY"/>
                                     <constraint firstItem="c3x-TT-mOp" firstAttribute="top" secondItem="uMd-cP-o4B" secondAttribute="top" constant="20" id="Cx8-al-KO7"/>
                                     <constraint firstItem="8Wc-WP-tdw" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="FM0-3v-uo1"/>
                                     <constraint firstItem="Mgi-sE-6ZY" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="Hq3-Wc-3xa"/>
-                                    <constraint firstItem="9q8-l4-S1P" firstAttribute="top" secondItem="c3x-TT-mOp" secondAttribute="bottom" constant="11" id="IbU-4j-fSe"/>
                                     <constraint firstItem="c3x-TT-mOp" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="N58-sx-mL5"/>
                                     <constraint firstItem="SsA-qG-G0o" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="SYt-5p-h3l"/>
                                     <constraint firstAttribute="trailing" secondItem="8Wc-WP-tdw" secondAttribute="trailing" constant="28" id="TKk-4H-MZC"/>
                                     <constraint firstItem="2G1-pd-f25" firstAttribute="top" secondItem="uMd-cP-o4B" secondAttribute="top" constant="20" id="aMq-IG-FlB"/>
                                     <constraint firstAttribute="height" constant="305" id="fMh-Tm-4sL"/>
                                     <constraint firstAttribute="trailing" secondItem="Mgi-sE-6ZY" secondAttribute="trailing" constant="28" id="fSA-z3-JSJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="9q8-l4-S1P" secondAttribute="trailing" constant="28" id="gYJ-Qi-U0Q"/>
-                                    <constraint firstItem="9q8-l4-S1P" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="nF9-IN-NQj"/>
                                     <constraint firstItem="LI7-eb-Tre" firstAttribute="leading" secondItem="uMd-cP-o4B" secondAttribute="leading" constant="28" id="ojq-N7-Imt"/>
                                     <constraint firstAttribute="trailing" secondItem="LI7-eb-Tre" secondAttribute="trailing" constant="28" id="otq-NX-V04"/>
-                                    <constraint firstItem="LI7-eb-Tre" firstAttribute="top" secondItem="9q8-l4-S1P" secondAttribute="bottom" constant="8" id="vBE-8C-NxQ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -865,7 +842,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub0-Ef-N9y">
-                                        <rect key="frame" x="28" y="113" width="253" height="40"/>
+                                        <rect key="frame" x="28" y="168" width="253" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
@@ -879,6 +856,23 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="restartTapped:" destination="b1t-Nc-XyK" eventType="touchUpInside" id="m48-Qg-mVL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rm-K0-6gi">
+                                        <rect key="frame" x="28" y="218" width="253" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                        <state key="normal" title="MENÜYE DÖN">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="0UC-IL-Cmo" kind="unwind" identifier="backToMenuSegue" unwindAction="unwindToMainSegue:" id="0zl-5B-Cuf"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURAKLATILDI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9Nf-tb-HDH">
@@ -1073,9 +1067,6 @@
         <image name="replay" width="35" height="39"/>
         <image name="settingsButton" width="24" height="21"/>
         <image name="titleImage" width="263" height="134"/>
-        <namedColor name="green">
-            <color red="0.26899999380111694" green="0.72100001573562622" blue="0.36500000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="secondaryButtonColor">
             <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -32,13 +32,13 @@ class EndingViewController: UIViewController {
     }
     
     @IBAction func wordListTapped(_ sender: UIButton) {
-        let vc = GKGameCenterViewController()
-        vc.gameCenterDelegate = self
-        vc.viewState = .leaderboards
-        vc.leaderboardIdentifier = leaderboardID
-        
-        present(vc, animated: true, completion: nil)
-       // self.performSegue(withIdentifier: "wordListSegue", sender: self)
+//        let vc = GKGameCenterViewController()
+//        vc.gameCenterDelegate = self
+//        vc.viewState = .leaderboards
+//        vc.leaderboardIdentifier = leaderboardID
+//
+//        present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "wordListSegue", sender: self)
     }
     
     func setupAnimation() {

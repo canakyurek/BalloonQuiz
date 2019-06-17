@@ -34,6 +34,7 @@
 		6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B621F1418400583C2E /* BalloonNode.swift */; };
 		6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */; };
 		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
+		6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */; };
 		6ECFCDF32253B7FC009198DD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF22253B7FC009198DD /* Player.swift */; };
 		6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF42253B80E009198DD /* BaseModel.swift */; };
 		6EE1E262226F10DE008B309C /* PointsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1E261226F10DE008B309C /* PointsComponent.swift */; };
@@ -81,6 +82,7 @@
 		6EAF6F212253BE48001771D1 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
 		6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoachMarksDataSource.swift"; sourceTree = "<group>"; };
 		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
+		6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bossa.mp3; sourceTree = "<group>"; };
 		6ECFCDF22253B7FC009198DD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6ECFCDF42253B80E009198DD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		6EE1E261226F10DE008B309C /* PointsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsComponent.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		6EA9807621F0E51E00583C2E /* Magic Wordz */ = {
 			isa = PBXGroup;
 			children = (
+				6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */,
 				6E73EAE022B02CF400B0827D /* confetti.json */,
 				6EA9807721F0E51E00583C2E /* AppDelegate.swift */,
 				6EDE15E121F5B17100906312 /* Model */,
@@ -314,6 +317,7 @@
 				6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */,
 				6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */,
 				6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */,
+				6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
