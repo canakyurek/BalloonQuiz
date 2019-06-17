@@ -203,13 +203,13 @@
 		6EDE15E321F5B18500906312 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6E266D4C222F1281005472E7 /* MainViewController.swift */,
 				6EA9807921F0E51E00583C2E /* GameViewController.swift */,
 				6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */,
+				6EE1E269226F2A6F008B309C /* PauseViewController.swift */,
 				6E8998FD21F1699400AD3A39 /* EndingViewController.swift */,
-				6E266D4C222F1281005472E7 /* MainViewController.swift */,
 				6E97EDAD22399BE80040924B /* SettingsViewController.swift */,
 				6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */,
-				6EE1E269226F2A6F008B309C /* PauseViewController.swift */,
 				6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */,
 			);
 			path = Controller;

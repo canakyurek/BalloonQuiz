@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class MainViewController: UIViewController {
 
@@ -25,6 +26,8 @@ class MainViewController: UIViewController {
     @IBAction func unwindToMainSegue(_ sender: UIStoryboardSegue) {}
     var dualList = [Question]()
     
+    var gcEnabled = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +38,7 @@ class MainViewController: UIViewController {
         } else {
             obtainQuestionList()
         }
+        authenticateUser()
         setupButtons()
         checkForPersonalHighscore()
     }
@@ -62,6 +66,18 @@ class MainViewController: UIViewController {
             self.performSegue(withIdentifier: "startGameSegue", sender: self)
         }
 
+    }
+    
+    func authenticateUser() {
+        GKLocalPlayer.local.authenticateHandler = { (vc, error) in
+            if vc != nil {
+                self.present(vc!, animated: true, completion: nil)
+            } else if GKLocalPlayer.local.isAuthenticated {
+                self.gcEnabled = true
+            } else {
+                self.gcEnabled = false
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

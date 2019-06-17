@@ -16,27 +16,29 @@ class EndingViewController: UIViewController {
     var timerValue = 0.0
     var highscoreValue = 0
     var score = 0
-    let leaderBoardID = "highscores"
-    
     var corrects: [Answer]!
     var wrongs: [Answer]!
+    
+    let leaderboardID = "highscores"
     
     @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var correctCountLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: CountingLabel!
-    @IBOutlet weak var highscoreLabel: UILabel! {
-        didSet {
-            setHighscoreText()
-        }
-    }
+    @IBOutlet weak var highscoreLabel: UILabel!
     
     @IBAction func replayTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "replaySegue", sender: self)
     }
     
     @IBAction func wordListTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "wordListSegue", sender: self)
+        let vc = GKGameCenterViewController()
+        vc.gameCenterDelegate = self
+        vc.viewState = .leaderboards
+        vc.leaderboardIdentifier = leaderboardID
+        
+        present(vc, animated: true, completion: nil)
+       // self.performSegue(withIdentifier: "wordListSegue", sender: self)
     }
     
     func setupAnimation() {
@@ -51,8 +53,10 @@ class EndingViewController: UIViewController {
 
         correctCountLabel.text = "\(correctCount)"
         scoreLabel.countFromZero(to: Float(score), duration: .brisk)
-        scoreLabel.completion = {
-            self.setupAnimation()
+        if score != 0 {
+            scoreLabel.completion = {
+                self.setupAnimation()
+            }
         }
         timerLabel.text = String(format: "%.1f", timerValue)
     }
@@ -69,35 +73,31 @@ class EndingViewController: UIViewController {
             destination.corrects = corrects
             destination.wrongs = wrongs
         }
-        
-    }
-    
-    func setHighscoreText() {
-        highscoreValue = UserDefaults.standard.integer(forKey: "highscore")
-        if score > highscoreValue {
-            highscoreValue = score
-            UserDefaults.standard.set(highscoreValue, forKey: "highscore")
-        }
-        highscoreLabel.text = "\(highscoreValue)"
     }
     
     func postHighscore() {
         if GKLocalPlayer.local.isAuthenticated {
             highscoreValue = UserDefaults.standard.integer(forKey: "highscore")
-            if correctCount > 0 {
-                highscoreValue = correctCount
-                let gkScore = GKScore(leaderboardIdentifier: leaderBoardID)
-                gkScore.value = Int64(correctCount)
+            if score > highscoreValue {
+                highscoreValue = score
+                highscoreLabel.text = "\(highscoreValue)"
+                let gkScore = GKScore(leaderboardIdentifier: leaderboardID)
+                gkScore.value = Int64(score)
                 GKScore.report([gkScore]) { error in
                     if error != nil {
                         print(error!.localizedDescription)
                     } else {
-                        print("Score reported: \(self.correctCount)")
+                        print("Score reported: \(self.score)")
                     }
                 }
                 UserDefaults.standard.set(highscoreValue, forKey: "highscore")
             }
-            
         }
+    }
+}
+
+extension EndingViewController: GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }

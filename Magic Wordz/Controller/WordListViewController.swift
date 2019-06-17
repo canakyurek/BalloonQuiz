@@ -28,6 +28,7 @@ class WordListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        dataSource = corrects!
         tableView.reloadData()
     }
 
