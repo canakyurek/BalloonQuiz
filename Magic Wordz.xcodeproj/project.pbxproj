@@ -35,6 +35,9 @@
 		6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */; };
 		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
 		6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */; };
+		6EC1F93122B83EE0002D0CC9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */; };
+		6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */; };
+		6EC1F93522B841E7002D0CC9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */; };
 		6ECFCDF32253B7FC009198DD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF22253B7FC009198DD /* Player.swift */; };
 		6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF42253B80E009198DD /* BaseModel.swift */; };
 		6EE1E262226F10DE008B309C /* PointsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1E261226F10DE008B309C /* PointsComponent.swift */; };
@@ -83,6 +86,9 @@
 		6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoachMarksDataSource.swift"; sourceTree = "<group>"; };
 		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bossa.mp3; sourceTree = "<group>"; };
+		6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		6ECFCDF22253B7FC009198DD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6ECFCDF42253B80E009198DD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		6EE1E261226F10DE008B309C /* PointsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsComponent.swift; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 				6EFDDE0F2274C5BE00FE7BCE /* SegmentedControl.swift */,
 				6EFDDE152274D77B00FE7BCE /* WordCell.swift */,
 				6E9BB9B822B03B3700B34C15 /* CountingLabel.swift */,
+				6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */,
+				6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 				6E97EDAD22399BE80040924B /* SettingsViewController.swift */,
 				6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */,
 				6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */,
+				6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 				6E0C96E4225BEA4000B223B9 /* AirbnbCereal-Light.ttf in Resources */,
 				6E775CFA225BA8F600F7D948 /* ARCO.otf in Resources */,
 				6EA9807F21F0E52000583C2E /* Assets.xcassets in Resources */,
+				6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */,
 				6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */,
 				6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */,
 				6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */,
@@ -394,6 +404,7 @@
 				6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */,
 				6ECFCDF32253B7FC009198DD /* Player.swift in Sources */,
 				6EE1E268226F1654008B309C /* HealthComponent.swift in Sources */,
+				6EC1F93522B841E7002D0CC9 /* CategoryCell.swift in Sources */,
 				6E9BB9B922B03B3700B34C15 /* CountingLabel.swift in Sources */,
 				6EA980B521F13F8C00583C2E /* Scene.swift in Sources */,
 				6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */,
@@ -401,6 +412,7 @@
 				6EA9807A21F0E51E00583C2E /* GameViewController.swift in Sources */,
 				6EFDDE102274C5BE00FE7BCE /* SegmentedControl.swift in Sources */,
 				6EA9807821F0E51E00583C2E /* AppDelegate.swift in Sources */,
+				6EC1F93122B83EE0002D0CC9 /* CategoryViewController.swift in Sources */,
 				6E731FC0224FC0440017C04B /* LeaderboardViewController.swift in Sources */,
 				6EFDDE162274D77B00FE7BCE /* WordCell.swift in Sources */,
 				6E288797223312A500A6E5FE /* DataText.swift in Sources */,
@@ -551,8 +563,10 @@
 			baseConfigurationReference = 1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Balloon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -563,6 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.magic-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -573,8 +588,10 @@
 			baseConfigurationReference = E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Balloon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 7E4QTSF55Q;
 				INFOPLIST_FILE = "$(SRCROOT)/Magic Wordz/Source/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -585,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.canakyurek.magic-words";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
