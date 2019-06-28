@@ -58,26 +58,16 @@ class GameViewController: UIViewController {
     var corrects = [Answer]()
     var wrongs = [Answer]()
     
-    lazy var musicPlayer: AVAudioPlayer? = {
-        var player: AVAudioPlayer?
-        do {
-            if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
-                let url = URL(string: path) {
-                player = try AVAudioPlayer(contentsOf: url)
-            }
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        player?.numberOfLoops = -1
-        
-        return player
-    }()
+    var musicPlayer: AVAudioPlayer!
     
     // MARK: - Constants
     
     let notificationCenter = NotificationCenter.default
     var coachMarksController: CoachMarksController?
     let pointOfInterest = UIView()
+    
+    var mediumFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    var heavyFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
     
     // MARK: - Lifecycle methods
     
@@ -93,12 +83,27 @@ class GameViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.adSize = kGADAdSizeBanner
         bannerView.load(GADRequest())
-        
+        DispatchQueue.global().async {
+            self.musicPlayer = AVAudioPlayer()
+            do {
+                if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
+                    let url = URL(string: path) {
+                    self.musicPlayer = try AVAudioPlayer(contentsOf: url)
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+            self.musicPlayer?.numberOfLoops = -1
+        }
         interstitial = createAndLoadInterstitial()
+        
         notificationCenter.addObserver(self,
                                        selector: #selector(self.pauseGame),
                                        name: UIApplication.willResignActiveNotification,
                                        object: nil)
+        
+        mediumFeedbackGenerator.prepare()
+        heavyFeedbackGenerator.prepare()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -262,6 +267,7 @@ class GameViewController: UIViewController {
             
         } else {
             falseCounter += 1
+            mediumFeedbackGenerator.impactOccurred()
             let userInfo = ["falseCount": falseCounter]
             notificationCenter.post(name: Notification.Name("FalseAnswer"),
                                     object: nil,
@@ -341,6 +347,7 @@ class GameViewController: UIViewController {
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
         stopTimer()
+        heavyFeedbackGenerator.impactOccurred()
         choiceButtons.forEach({ $0.isEnabled = false })
         self.pauseButton.isEnabled = false
         guard var questions = questions else { return }

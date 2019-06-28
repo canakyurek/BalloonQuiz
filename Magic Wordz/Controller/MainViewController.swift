@@ -63,7 +63,7 @@ class MainViewController: UIViewController {
         playButtonContainer.setIconImage(named: .play)
         playButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }
-            self.performSegue(withIdentifier: "startGameSegue", sender: self)
+            self.performSegue(withIdentifier: "chooseCategorySegue", sender: self)
         }
 
     }
@@ -81,8 +81,8 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "startGameSegue" {
-            if let destination = segue.destination as? GameViewController {
+        if segue.identifier == "chooseCategorySegue" {
+            if let destination = segue.destination as? CategoryViewController {
                 destination.questions = dualList
             }
         }

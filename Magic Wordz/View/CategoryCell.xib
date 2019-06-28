@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,17 +40,36 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-2b-Eum">
+                        <rect key="frame" x="107" y="120" width="32" height="32"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="OT9-0C-sdk"/>
+                            <constraint firstAttribute="width" constant="32" id="hne-SL-4xV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="OQr-62-IgM" firstAttribute="top" secondItem="d06-Er-SzL" secondAttribute="bottom" constant="7" id="7Yc-Js-ljM"/>
+                <constraint firstItem="OQr-62-IgM" firstAttribute="top" secondItem="EqD-2b-Eum" secondAttribute="bottom" constant="5" id="CWW-Kd-AmR"/>
                 <constraint firstItem="d06-Er-SzL" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" id="D6G-4d-3nQ"/>
                 <constraint firstItem="d06-Er-SzL" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" id="I3i-dP-SBa"/>
                 <constraint firstItem="OQr-62-IgM" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" id="M23-En-rWZ"/>
                 <constraint firstAttribute="trailing" secondItem="OQr-62-IgM" secondAttribute="trailing" id="MCT-SD-prr"/>
                 <constraint firstAttribute="bottom" secondItem="OQr-62-IgM" secondAttribute="bottom" constant="9" id="h6e-bc-SOb"/>
                 <constraint firstAttribute="trailing" secondItem="d06-Er-SzL" secondAttribute="trailing" id="myH-Go-TpO"/>
+                <constraint firstAttribute="trailing" secondItem="EqD-2b-Eum" secondAttribute="trailing" constant="11" id="nIe-kK-yFx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="LV0-NN-kQW"/>
             <size key="customSize" width="150" height="187"/>
@@ -60,4 +80,9 @@
             <point key="canvasLocation" x="14.492753623188406" y="-70.647321428571431"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="yellow">
+            <color red="0.95200002193450928" green="0.74500000476837158" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

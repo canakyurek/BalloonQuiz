@@ -12,12 +12,23 @@ class CategoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var questions: [Question]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
         let nib = UINib(nibName: "CategoryCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "CategoryCell")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startGameSegue" {
+            if let destination = segue.destination as? GameViewController {
+                destination.questions = questions
+            }
+        }
     }
 }
 
@@ -38,5 +49,12 @@ extension CategoryViewController: UICollectionViewDataSource {
         cell.imageView.image = UIImage(named: "history")
         
         return cell
+    }
+}
+
+extension CategoryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "startGameSegue", sender: nil)
     }
 }

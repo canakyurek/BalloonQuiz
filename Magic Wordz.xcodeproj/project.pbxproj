@@ -32,6 +32,7 @@
 		6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA980B221F13E3800583C2E /* SpriteKit.framework */; };
 		6EA980B521F13F8C00583C2E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B421F13F8C00583C2E /* Scene.swift */; };
 		6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B621F1418400583C2E /* BalloonNode.swift */; };
+		6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB3072C22C40FD3002B99F0 /* GameKit.framework */; };
 		6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */; };
 		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
 		6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */; };
@@ -82,7 +83,8 @@
 		6EA980B221F13E3800583C2E /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		6EA980B421F13F8C00583C2E /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		6EA980B621F1418400583C2E /* BalloonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonNode.swift; sourceTree = "<group>"; };
-		6EAF6F212253BE48001771D1 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
+		6EB3072C22C40FD3002B99F0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6EB3072E22C40FD5002B99F0 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
 		6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoachMarksDataSource.swift"; sourceTree = "<group>"; };
 		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bossa.mp3; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */,
 				6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */,
 				E29A73F960B7317624664B70 /* Pods_Balloon.framework in Frameworks */,
 			);
@@ -128,7 +131,7 @@
 		6EA9806B21F0E51E00583C2E = {
 			isa = PBXGroup;
 			children = (
-				6EAF6F212253BE48001771D1 /* Balloon.entitlements */,
+				6EB3072E22C40FD5002B99F0 /* Balloon.entitlements */,
 				6EA9807621F0E51E00583C2E /* Magic Wordz */,
 				6EA9807521F0E51E00583C2E /* Products */,
 				6EA980B121F13E3800583C2E /* Frameworks */,
@@ -164,6 +167,7 @@
 		6EA980B121F13E3800583C2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EB3072C22C40FD3002B99F0 /* GameKit.framework */,
 				6EA980B221F13E3800583C2E /* SpriteKit.framework */,
 				55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */,
 			);
@@ -277,8 +281,11 @@
 					6EA9807321F0E51E00583C2E = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
-							com.apple.GameCenter.iOS = {
+							com.apple.DataProtection = {
 								enabled = 0;
+							};
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
 							};
 							com.apple.HomeKit = {
 								enabled = 0;
@@ -563,7 +570,6 @@
 			baseConfigurationReference = 1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Balloon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
@@ -588,7 +594,6 @@
 			baseConfigurationReference = E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Balloon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
