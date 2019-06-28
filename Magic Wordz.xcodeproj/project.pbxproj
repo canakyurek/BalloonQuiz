@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E04EEA922C6850E00A5907E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04EEA822C6850E00A5907E /* Routable.swift */; };
 		6E0C96E4225BEA4000B223B9 /* AirbnbCereal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */; };
 		6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */; };
 		6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D44222EF508005472E7 /* ButtonContainer.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloon.debug.xcconfig"; path = "Target Support Files/Pods-Balloon/Pods-Balloon.debug.xcconfig"; sourceTree = "<group>"; };
 		55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E04EEA822C6850E00A5907E /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
 		6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Medium.ttf"; sourceTree = "<group>"; };
 		6E266D44222EF508005472E7 /* ButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainer.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6E04EEAA22C688F300A5907E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6E04EEA822C6850E00A5907E /* Routable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		6EA9806B21F0E51E00583C2E = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +168,8 @@
 				6EDE15E321F5B18500906312 /* Controller */,
 				6EDE15E421F5B19800906312 /* Source */,
 				6EDE15E221F5B17900906312 /* SpriteSource */,
-				6E288796223312A500A6E5FE /* DataText.swift */,
 				6EA3F9022233317400BD80FF /* SaveUtil.swift */,
+				6E04EEAA22C688F300A5907E /* Protocol */,
 			);
 			path = "Magic Wordz";
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 		6EDE15E421F5B19800906312 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E288796223312A500A6E5FE /* DataText.swift */,
 				6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */,
 				6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */,
 				6E775CF9225BA8F600F7D948 /* ARCO.otf */,
@@ -423,6 +434,7 @@
 				6E731FC0224FC0440017C04B /* LeaderboardViewController.swift in Sources */,
 				6EFDDE162274D77B00FE7BCE /* WordCell.swift in Sources */,
 				6E288797223312A500A6E5FE /* DataText.swift in Sources */,
+				6E04EEA922C6850E00A5907E /* Routable.swift in Sources */,
 				6EE1E26A226F2A6F008B309C /* PauseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

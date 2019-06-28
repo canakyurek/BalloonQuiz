@@ -934,7 +934,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="0UC-IL-Cmo" kind="unwind" identifier="backToMenuSegue" unwindAction="unwindToMainSegue:" id="0zl-5B-Cuf"/>
+                                            <action selector="menuTapped:" destination="b1t-Nc-XyK" eventType="touchUpInside" id="ziP-R4-M9V"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURAKLATILDI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9Nf-tb-HDH">
