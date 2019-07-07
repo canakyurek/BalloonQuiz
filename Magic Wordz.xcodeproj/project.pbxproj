@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 		6E731FC0224FC0440017C04B /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */; };
 		6E73EAE122B02CF400B0827D /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E73EAE022B02CF400B0827D /* confetti.json */; };
 		6E775CFA225BA8F600F7D948 /* ARCO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6E775CF9225BA8F600F7D948 /* ARCO.otf */; };
-		6E88A47D9ED32ED4CF7B582F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		6E88A47D9ED32ED4CF7B582F /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8998FD21F1699400AD3A39 /* EndingViewController.swift */; };
 		6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97EDAD22399BE80040924B /* SettingsViewController.swift */; };
 		6E9BB9B922B03B3700B34C15 /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BB9B822B03B3700B34C15 /* CountingLabel.swift */; };
@@ -113,7 +113,7 @@
 			files = (
 				6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */,
 				6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */,
-				6E88A47D9ED32ED4CF7B582F /* BuildFile in Frameworks */,
+				6E88A47D9ED32ED4CF7B582F /* (null) in Frameworks */,
 				E80BE587FE258D3EF7D3E054 /* Pods_Magic_Wordz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +245,6 @@
 				C5FB7C8B412E42F025E4A458 /* Pods-Magic Wordz.debug.xcconfig */,
 				9DDC925C5382359F3C18F0BB /* Pods-Magic Wordz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -283,6 +282,7 @@
 				TargetAttributes = {
 					6EA9807321F0E51E00583C2E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 0;
@@ -576,7 +576,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -600,7 +600,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
