@@ -84,7 +84,6 @@ class GameViewController: UIViewController {
         bannerView.adSize = kGADAdSizeBanner
         bannerView.load(GADRequest())
         DispatchQueue.global().async {
-            self.musicPlayer = AVAudioPlayer()
             do {
                 if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
                     let url = URL(string: path) {
