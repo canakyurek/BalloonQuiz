@@ -58,8 +58,6 @@ class GameViewController: UIViewController {
     var corrects = [Answer]()
     var wrongs = [Answer]()
     
-    var musicPlayer: AVAudioPlayer!
-    
     // MARK: - Constants
     
     let notificationCenter = NotificationCenter.default
@@ -83,17 +81,7 @@ class GameViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.adSize = kGADAdSizeBanner
         bannerView.load(GADRequest())
-        DispatchQueue.global().async {
-            do {
-                if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
-                    let url = URL(string: path) {
-                    self.musicPlayer = try AVAudioPlayer(contentsOf: url)
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-            self.musicPlayer?.numberOfLoops = -1
-        }
+        
         interstitial = createAndLoadInterstitial()
         
         notificationCenter.addObserver(self,
@@ -114,9 +102,8 @@ class GameViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
             setupCoachMarks()
         }
-        DispatchQueue.global().async {
-            self.musicPlayer?.play()
-        }
+        
+        SoundManager.shared.play(.inGame)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -146,7 +133,7 @@ class GameViewController: UIViewController {
             controller.stop(immediately: true)
         }
         
-        musicPlayer?.stop()
+        SoundManager.shared.stop(.inGame)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -309,9 +296,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
-        DispatchQueue.global().async {
-            self.musicPlayer?.play()
-        }
+        SoundManager.shared.play(.inGame)
         
         if sender.identifier == "replaySegue" {
             configQuestionList()
@@ -330,7 +315,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func pauseGame() {
-        musicPlayer?.stop()
+        SoundManager.shared.stop(.inGame)
         sceneView.isPaused = true
         if self.view.subviews.contains(blurredView) {
             blurredView.isHidden = false
