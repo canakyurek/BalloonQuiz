@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "Kisisel rekor: 40"; ObjectID = "1IF-st-Dlq"; */
+"1IF-st-Dlq.text" = "Kisisel rekor: 40";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "2G1-pd-f25"; */
+"2G1-pd-f25.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "3wd-T3-FUr"; */
+"3wd-T3-FUr.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4bu-6Q-0uK"; */
+"4bu-6Q-0uK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4tI-yU-udi"; */
+"4tI-yU-udi.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "62d-D5-I0B"; */
+"62d-D5-I0B.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "MENÜYE DÖN"; ObjectID = "7rm-K0-6gi"; */
+"7rm-K0-6gi.normalTitle" = "MENÜYE DÖN";
+
+/* Class = "UIButton"; normalTitle = "DİL SEÇİMİ"; ObjectID = "8Wc-WP-tdw"; */
+"8Wc-WP-tdw.normalTitle" = "DİL SEÇİMİ";
+
+/* Class = "UILabel"; text = "DURAKLATILDI"; ObjectID = "9Nf-tb-HDH"; */
+"9Nf-tb-HDH.text" = "DURAKLATILDI";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "BGg-wi-UkL"; */
+"BGg-wi-UkL.text" = "56";
+
+/* Class = "UILabel"; text = "Liderlik Tablosu"; ObjectID = "J1D-yL-8fT"; */
+"J1D-yL-8fT.text" = "Liderlik Tablosu";
+
+/* Class = "UIButton"; normalTitle = "MARKET"; ObjectID = "LI7-eb-Tre"; */
+"LI7-eb-Tre.normalTitle" = "MARKET";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MBm-C8-MhD"; */
+"MBm-C8-MhD.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "NASIL OYNANIR"; ObjectID = "Mgi-sE-6ZY"; */
+"Mgi-sE-6ZY.normalTitle" = "NASIL OYNANIR";
+
+/* Class = "UILabel"; text = "Correct Count"; ObjectID = "Ock-PK-L2f"; */
+"Ock-PK-L2f.text" = "Correct Count";
+
+/* Class = "UIButton"; normalTitle = "DEVAM ET"; ObjectID = "PTY-NJ-OuY"; */
+"PTY-NJ-OuY.normalTitle" = "DEVAM ET";
+
+/* Class = "UILabel"; text = "KELİME LİSTESİ"; ObjectID = "Q3v-7r-BKZ"; */
+"Q3v-7r-BKZ.text" = "KELİME LİSTESİ";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "Q4a-pk-igr"; */
+"Q4a-pk-igr.text" = "56";
+
+/* Class = "UIButton"; normalTitle = "SES"; ObjectID = "SsA-qG-G0o"; */
+"SsA-qG-G0o.normalTitle" = "SES";
+
+/* Class = "UIButton"; normalTitle = "BAŞTAN BAŞLA"; ObjectID = "Ub0-Ef-N9y"; */
+"Ub0-Ef-N9y.normalTitle" = "BAŞTAN BAŞLA";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "VFC-BM-Ied"; */
+"VFC-BM-Ied.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "ZCu-ZJ-B2p"; */
+"ZCu-ZJ-B2p.text" = "56";
+
+/* Class = "UILabel"; text = "AYARLAR"; ObjectID = "c3x-TT-mOp"; */
+"c3x-TT-mOp.text" = "AYARLAR";
+
+/* Class = "UILabel"; text = "56"; ObjectID = "eW4-yd-Xtn"; */
+"eW4-yd-Xtn.text" = "56";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gcz-72-dCK"; */
+"gcz-72-dCK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "SCORE"; ObjectID = "iuc-Xy-v9u"; */
+"iuc-Xy-v9u.text" = "SCORE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "neT-r9-A5R"; */
+"neT-r9-A5R.text" = "Label";
+
+/* Class = "UILabel"; text = "HIGH SCORE"; ObjectID = "pWJ-MM-zbc"; */
+"pWJ-MM-zbc.text" = "HIGH SCORE";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "qyw-6f-pyd"; */
+"qyw-6f-pyd.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "upN-H4-Yel"; */
+"upN-H4-Yel.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "veq-XJ-L38"; */
+"veq-XJ-L38.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "Flight Time"; ObjectID = "xw5-1Z-3NE"; */
+"xw5-1Z-3NE.text" = "Flight Time";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "y03-dv-bX4"; */
+"y03-dv-bX4.text" = "1";

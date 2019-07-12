@@ -245,7 +245,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-hN-1eU" userLabel="Buttons Stack">
                                 <rect key="frame" x="50" y="362" width="275" height="244"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-6Q-0uK">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-6Q-0uK" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -260,16 +260,15 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sss-Gk-9Rv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-72-dCK">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-72-dCK" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="85" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -284,16 +283,15 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hw-Di-40s"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MBm-C8-MhD">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MBm-C8-MhD" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -308,10 +306,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgz-Du-r3S"/>
@@ -419,7 +416,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="Uot-CG-O7i"/>
+                                            <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="R42-Qr-d5z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI7-eb-Tre">
@@ -485,6 +482,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="u1s-uI-Osj" kind="presentation" id="ES6-z5-1x3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -523,6 +523,10 @@
                         <viewLayoutGuide key="safeArea" id="Nx9-dA-8QA"/>
                     </view>
                     <connections>
+                        <outlet property="howToPlayButton" destination="Mgi-sE-6ZY" id="Zvy-65-ox6"/>
+                        <outlet property="languageButton" destination="8Wc-WP-tdw" id="Qbs-9s-jcE"/>
+                        <outlet property="titleLabel" destination="c3x-TT-mOp" id="Z9n-x6-MgD"/>
+                        <outlet property="volumeButton" destination="SsA-qG-G0o" id="R97-pA-mtu"/>
                         <segue destination="Z1K-x8-UjV" kind="unwind" identifier="closeSettingsSegue" unwindAction="unwindToMainSegue:" id="ILU-Wg-TF1"/>
                     </connections>
                 </viewController>
@@ -530,6 +534,90 @@
                 <exit id="Z1K-x8-UjV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-570.39999999999998" y="917.99100449775119"/>
+        </scene>
+        <!--Language Selection View Controller-->
+        <scene sceneID="7Je-pQ-uOC">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="u1s-uI-Osj" customClass="LanguageSelectionViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MqJ-ST-k8J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qi8-RL-ecz">
+                                <rect key="frame" x="33" y="329" width="309" height="305"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXu-hF-oaD">
+                                        <rect key="frame" x="28" y="20" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="18d-y9-rF0" kind="unwind" unwindAction="unwindToSettings:" id="DkE-x5-euo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-jb-CtM">
+                                        <rect key="frame" x="247" y="20" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="18"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="rjW-zL-3KW"/>
+                                            <segue destination="18d-y9-rF0" kind="unwind" unwindAction="unwindToMainSegue:" id="y63-VF-UaI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dil Seçimi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-td-tu0">
+                                        <rect key="frame" x="82" y="27" width="146" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FD-hS-USY">
+                                        <rect key="frame" x="131" y="137" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="languageButtonTapped:" destination="u1s-uI-Osj" eventType="touchUpInside" id="o35-pP-tCk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="pB3-Tk-q8K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rFi-sc-lqb" firstAttribute="trailing" secondItem="qi8-RL-ecz" secondAttribute="trailing" constant="33" id="Prb-ny-ZjP"/>
+                            <constraint firstItem="qi8-RL-ecz" firstAttribute="leading" secondItem="rFi-sc-lqb" secondAttribute="leading" constant="33" id="Xxe-0f-RlA"/>
+                            <constraint firstItem="rFi-sc-lqb" firstAttribute="bottom" secondItem="qi8-RL-ecz" secondAttribute="bottom" constant="33" id="tEM-0u-GuV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rFi-sc-lqb"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="ppm-td-tu0" id="Nk5-2H-rAu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCc-Gt-hYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="18d-y9-rF0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-570.39999999999998" y="1638.5307346326838"/>
         </scene>
         <!--Ending View Controller-->
         <scene sceneID="5pg-SE-8md">
@@ -752,8 +840,12 @@
                     <connections>
                         <outlet property="animationView" destination="i8T-mJ-Ymn" id="D7v-6y-pFb"/>
                         <outlet property="correctCountLabel" destination="eW4-yd-Xtn" id="qKa-Gu-2Pg"/>
+                        <outlet property="correctCountTitleLabel" destination="Ock-PK-L2f" id="KoM-Gr-BuN"/>
+                        <outlet property="flightTimeTitleLabel" destination="xw5-1Z-3NE" id="Qv5-rx-HaB"/>
+                        <outlet property="highScoreTitleLabel" destination="pWJ-MM-zbc" id="8mG-pf-uNz"/>
                         <outlet property="highscoreLabel" destination="ZCu-ZJ-B2p" id="rC2-kP-U0w"/>
                         <outlet property="scoreLabel" destination="Q4a-pk-igr" id="kdP-nE-KS1"/>
+                        <outlet property="scoreTitleLabel" destination="iuc-Xy-v9u" id="yB1-al-piT"/>
                         <outlet property="timerLabel" destination="BGg-wi-UkL" id="Vkp-Bq-GeS"/>
                         <segue destination="1th-b4-tv6" kind="unwind" identifier="replaySegue" unwindAction="unwindToGameScene:" id="nWv-7K-fOY"/>
                         <segue destination="FDd-6Q-VH5" kind="show" identifier="wordListSegue" id="RXg-Mh-lP5"/>
@@ -869,6 +961,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="ewz-Bk-QGR" id="sVy-XS-QY2"/>
+                        <outlet property="titleLabel" destination="Q3v-7r-BKZ" id="hca-cy-QIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9a-iB-OZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -970,6 +1063,10 @@
                         <viewLayoutGuide key="safeArea" id="AQ9-Dl-kFw"/>
                     </view>
                     <connections>
+                        <outlet property="backToMenuButton" destination="7rm-K0-6gi" id="4NG-8H-Oya"/>
+                        <outlet property="continueButton" destination="PTY-NJ-OuY" id="ElC-il-STx"/>
+                        <outlet property="restartButton" destination="Ub0-Ef-N9y" id="5M2-HR-3Dg"/>
+                        <outlet property="titleLabel" destination="9Nf-tb-HDH" id="wUS-o1-dzk"/>
                         <segue destination="0UC-IL-Cmo" kind="unwind" identifier="resumeSegue" unwindAction="unwindToGameScene:" id="Ps3-9S-WvG"/>
                         <segue destination="0UC-IL-Cmo" kind="unwind" identifier="restartSegue" unwindAction="unwindToGameScene:" id="Bp9-F8-Cwd"/>
                     </connections>
@@ -1107,6 +1204,7 @@
                     <connections>
                         <outlet property="indicator" destination="Qvh-Jw-8QR" id="5Ne-0E-PTu"/>
                         <outlet property="tableView" destination="XzR-3x-oJP" id="pwx-Ej-rBe"/>
+                        <outlet property="titleLabel" destination="J1D-yL-8fT" id="Ade-8l-D7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeO-J4-Wjb" userLabel="First Responder" sceneMemberID="firstResponder"/>

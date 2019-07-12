@@ -11,6 +11,9 @@ import UIKit
 class WordListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     var corrects: [Answer]?
     var wrongs: [Answer]?
     var dataSource = [Answer]()
@@ -22,7 +25,14 @@ class WordListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let segment = SegmentedControl(frame: CGRect(x: 50, y: 70, width: self.view.frame.width - 100, height: 50), buttonTitles: ["Bilinenler", "Bilinemeyenler"])
+        titleLabel.text = Localizable.SideEndings.wordList.localized
+        let segment = SegmentedControl(frame: CGRect(
+            x: 50,
+            y: 70,
+            width: self.view.frame.width - 100,
+            height: 50),
+            buttonTitles: [Localizable.SideEndings.known.localized, Localizable.SideEndings.unknown.localized]
+        )
         segment.delegate = self
         view.addSubview(segment)
         

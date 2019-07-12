@@ -27,18 +27,24 @@ class EndingViewController: UIViewController {
     @IBOutlet weak var scoreLabel: CountingLabel!
     @IBOutlet weak var highscoreLabel: UILabel!
     
+    @IBOutlet weak var scoreTitleLabel: UILabel!
+    @IBOutlet weak var highScoreTitleLabel: UILabel!
+    @IBOutlet weak var flightTimeTitleLabel: UILabel!
+    @IBOutlet weak var correctCountTitleLabel: UILabel!
+    
     @IBAction func replayTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "replaySegue", sender: self)
     }
     
     @IBAction func wordListTapped(_ sender: UIButton) {
-//        let vc = GKGameCenterViewController()
-//        vc.gameCenterDelegate = self
-//        vc.viewState = .leaderboards
-//        vc.leaderboardIdentifier = leaderboardID
-//
-//        present(vc, animated: true, completion: nil)
         self.performSegue(withIdentifier: "wordListSegue", sender: self)
+    }
+    
+    private func setLocalizationStrings() {
+        scoreTitleLabel.text = Localizable.Ending.score.localized
+        highScoreTitleLabel.text = Localizable.Ending.highScore.localized
+        flightTimeTitleLabel.text = Localizable.Ending.flightTime.localized
+        correctCountTitleLabel.text = Localizable.Ending.correctCount.localized
     }
     
     func setupAnimation() {
@@ -51,6 +57,7 @@ class EndingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setLocalizationStrings()
         correctCountLabel.text = "\(correctCount)"
         scoreLabel.countFromZero(to: Float(score), duration: .brisk)
         if score != 0 {

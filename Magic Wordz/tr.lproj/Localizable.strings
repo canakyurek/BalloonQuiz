@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Magic Wordz
+
+  Created by Can Akyurek on 28.06.2019.
+  Copyright © 2019 Can Akyurek. All rights reserved.
+*/
+
+"kPlay" = "Oyna";
+"kPersonalRecord" = "Kişisel Rekor";
+
+"kSettings" = "AYARLAR";
+"kHowToPlay" = "NASIL OYNANIR";
+"kVolume" = "SES";
+"kLanguage" = "Dil Seçimi";
+
+"kPaused" = "Duraklatıldı";
+"kContinue" = "Devam Et";
+"kRestart" = "Baştan Başla";
+"kBackToMenu" = "Menüye Dön";
+
+"kScore" = "Puan";
+"kHighScore" = "En İyi Puan";
+"kFlightTime" = "Uçuş Süresi";
+"kCorrectCount" = "Doğru Sayısı";
+
+"kLeaderborad" = "Liderlik Tablosu";
+"kWordList" = "Kelime Listesi";
+"kKnown" = "Bilinenler";
+"kUnknown" = "Bilinemeyenler";

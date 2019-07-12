@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6E04EEA922C6850E00A5907E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04EEA822C6850E00A5907E /* Routable.swift */; };
+		6E04EEAF22C689DF00A5907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E04EEB122C689DF00A5907E /* Localizable.strings */; };
+		6E04EEB422C68B2500A5907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E04EEB622C68B2500A5907E /* Localizable.strings */; };
+		6E04EEB822C68BB300A5907E /* LocalizationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */; };
 		6E0C96E4225BEA4000B223B9 /* AirbnbCereal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */; };
 		6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */; };
 		6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D44222EF508005472E7 /* ButtonContainer.swift */; };
@@ -40,8 +43,10 @@
 		6EC1F93122B83EE0002D0CC9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */; };
 		6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */; };
 		6EC1F93522B841E7002D0CC9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */; };
+		6ECF2CF122D86D2F00E650CA /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF2CF022D86D2F00E650CA /* OptionButton.swift */; };
 		6ECFCDF32253B7FC009198DD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF22253B7FC009198DD /* Player.swift */; };
 		6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECFCDF42253B80E009198DD /* BaseModel.swift */; };
+		6ED0605822CA798300F555F4 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0605722CA798300F555F4 /* LanguageSelectionViewController.swift */; };
 		6EE1E262226F10DE008B309C /* PointsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1E261226F10DE008B309C /* PointsComponent.swift */; };
 		6EE1E264226F1135008B309C /* PointsComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE1E263226F1135008B309C /* PointsComponent.xib */; };
 		6EE1E266226F1596008B309C /* HealthComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE1E265226F1596008B309C /* HealthComponent.xib */; };
@@ -58,6 +63,11 @@
 		1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloon.debug.xcconfig"; path = "Target Support Files/Pods-Balloon/Pods-Balloon.debug.xcconfig"; sourceTree = "<group>"; };
 		55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E04EEA822C6850E00A5907E /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		6E04EEAB22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		6E04EEAC22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6E04EEB022C689DF00A5907E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E04EEB522C68B2500A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationEnums.swift; sourceTree = "<group>"; };
 		6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
 		6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Medium.ttf"; sourceTree = "<group>"; };
 		6E266D44222EF508005472E7 /* ButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainer.swift; sourceTree = "<group>"; };
@@ -93,8 +103,10 @@
 		6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		6ECF2CF022D86D2F00E650CA /* OptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 		6ECFCDF22253B7FC009198DD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		6ECFCDF42253B80E009198DD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		6ED0605722CA798300F555F4 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
 		6EE1E261226F10DE008B309C /* PointsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsComponent.swift; sourceTree = "<group>"; };
 		6EE1E263226F1135008B309C /* PointsComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsComponent.xib; sourceTree = "<group>"; };
 		6EE1E265226F1596008B309C /* HealthComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthComponent.xib; sourceTree = "<group>"; };
@@ -170,6 +182,9 @@
 				6EDE15E221F5B17900906312 /* SpriteSource */,
 				6EA3F9022233317400BD80FF /* SaveUtil.swift */,
 				6E04EEAA22C688F300A5907E /* Protocol */,
+				6E04EEB122C689DF00A5907E /* Localizable.strings */,
+				6E04EEB622C68B2500A5907E /* Localizable.strings */,
+				6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */,
 			);
 			path = "Magic Wordz";
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 				6E9BB9B822B03B3700B34C15 /* CountingLabel.swift */,
 				6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */,
 				6EC1F93422B841E7002D0CC9 /* CategoryCell.swift */,
+				6ECF2CF022D86D2F00E650CA /* OptionButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,14 +245,15 @@
 			isa = PBXGroup;
 			children = (
 				6E266D4C222F1281005472E7 /* MainViewController.swift */,
+				6E97EDAD22399BE80040924B /* SettingsViewController.swift */,
 				6EA9807921F0E51E00583C2E /* GameViewController.swift */,
 				6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */,
 				6EE1E269226F2A6F008B309C /* PauseViewController.swift */,
 				6E8998FD21F1699400AD3A39 /* EndingViewController.swift */,
-				6E97EDAD22399BE80040924B /* SettingsViewController.swift */,
 				6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */,
 				6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */,
 				6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */,
+				6ED0605722CA798300F555F4 /* LanguageSelectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,6 +332,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 6EA9806B21F0E51E00583C2E;
 			productRefGroup = 6EA9807521F0E51E00583C2E /* Products */;
@@ -331,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E04EEB422C68B2500A5907E /* Localizable.strings in Resources */,
 				6EE1E264226F1135008B309C /* PointsComponent.xib in Resources */,
 				6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */,
 				6EE1E266226F1596008B309C /* HealthComponent.xib in Resources */,
@@ -344,6 +363,7 @@
 				6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */,
 				6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */,
 				6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */,
+				6E04EEAF22C689DF00A5907E /* Localizable.strings in Resources */,
 				6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */,
 				6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */,
 			);
@@ -409,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED0605822CA798300F555F4 /* LanguageSelectionViewController.swift in Sources */,
 				6EFDDE122274CB2300FE7BCE /* WordListViewController.swift in Sources */,
 				6EE1E262226F10DE008B309C /* PointsComponent.swift in Sources */,
 				6EA3F9032233317400BD80FF /* SaveUtil.swift in Sources */,
@@ -428,6 +449,7 @@
 				6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */,
 				6E266D4D222F1281005472E7 /* MainViewController.swift in Sources */,
 				6EA9807A21F0E51E00583C2E /* GameViewController.swift in Sources */,
+				6ECF2CF122D86D2F00E650CA /* OptionButton.swift in Sources */,
 				6EFDDE102274C5BE00FE7BCE /* SegmentedControl.swift in Sources */,
 				6EA9807821F0E51E00583C2E /* AppDelegate.swift in Sources */,
 				6EC1F93122B83EE0002D0CC9 /* CategoryViewController.swift in Sources */,
@@ -436,16 +458,34 @@
 				6E288797223312A500A6E5FE /* DataText.swift in Sources */,
 				6E04EEA922C6850E00A5907E /* Routable.swift in Sources */,
 				6EE1E26A226F2A6F008B309C /* PauseViewController.swift in Sources */,
+				6E04EEB822C68BB300A5907E /* LocalizationEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6E04EEB122C689DF00A5907E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E04EEB022C689DF00A5907E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6E04EEB622C68B2500A5907E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E04EEB522C68B2500A5907E /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		6EA9807B21F0E51E00583C2E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6EA9807C21F0E51E00583C2E /* Base */,
+				6E04EEAB22C689A700A5907E /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -454,6 +494,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6EA9808121F0E52000583C2E /* Base */,
+				6E04EEAC22C689A700A5907E /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -465,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -526,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

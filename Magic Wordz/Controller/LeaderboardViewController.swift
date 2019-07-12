@@ -15,6 +15,8 @@ class LeaderboardViewController: UIViewController {
     var dataList = [GKScore]()
     let leaderboardID = "highscores"
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var indicator: UIActivityIndicatorView! {
         didSet {
             indicator.hidesWhenStopped = true
@@ -28,10 +30,20 @@ class LeaderboardViewController: UIViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setLocalizationStrings()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         obtainLeaderboard()
+    }
+    
+    func setLocalizationStrings() {
+        titleLabel.text = Localizable.SideEndings.leaderboard.localized
     }
     
     func obtainLeaderboard() {

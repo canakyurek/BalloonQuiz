@@ -52,14 +52,14 @@ class MainViewController: UIViewController {
     func checkForPersonalHighscore() {
         let highscore = UserDefaults.standard.integer(forKey: "highscore")
         if  highscore != 0 {
-            personalHighScoreLabel.text = "Kisisel rekor: \(highscore)"
+            personalHighScoreLabel.text = "\(Localizable.MainMenu.personalRecord.localized): \(highscore)"
         } else {
             personalHighScoreLabel.isHidden = true
         }
     }
     
     func setupButtons() {
-        playButtonContainer.setTitle(as: "Oyna")
+        playButtonContainer.setTitle(as: Localizable.MainMenu.play.localized)
         playButtonContainer.setIconImage(named: .play)
         playButtonContainer.tapAction = { [weak self] in
             guard let `self` = self else { return }
