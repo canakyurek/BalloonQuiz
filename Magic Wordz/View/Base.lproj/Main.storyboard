@@ -25,7 +25,7 @@
         <!--Main View Controller-->
         <scene sceneID="tSl-BI-bF1">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="9uR-bE-e8n" customClass="MainViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="9uR-bE-e8n" customClass="MainViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eHY-rX-fKj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="width" secondItem="5yd-q7-VFp" secondAttribute="height" multiplier="120:139" constant="19.942446043165489" id="L05-RM-lX1"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-V3-a2Y" customClass="ButtonContainer" customModule="Balloon" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cf7-V3-a2Y" customClass="ButtonContainer" customModule="Magic_Wordz" customModuleProvider="target">
                                 <rect key="frame" x="54" y="501" width="267" height="68"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -122,7 +122,7 @@
         <!--Category View Controller-->
         <scene sceneID="Jzs-4J-yOc">
             <objects>
-                <viewController id="5Av-2E-Ncz" customClass="CategoryViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Av-2E-Ncz" customClass="CategoryViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vd5-rf-VpE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="O1Z-o0-wbA" customClass="CategoryCell" customModule="Balloon" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="O1Z-o0-wbA" customClass="CategoryCell" customModule="Magic_Wordz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="20" width="115" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -184,7 +184,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Game" id="BYZ-38-t0r" customClass="GameViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" id="BYZ-38-t0r" customClass="GameViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,14 +195,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-hz-AVU">
                                         <rect key="frame" x="20" y="38" width="334" height="36"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-w7-0GQ" customClass="PointsComponent" customModule="Balloon" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-w7-0GQ" customClass="PointsComponent" customModule="Magic_Wordz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="113" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pMP-w7-0GQ" secondAttribute="height" multiplier="35:12" constant="8" id="wrZ-zV-AXP"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-hz-wWD" customClass="HealthComponent" customModule="Balloon" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-hz-wWD" customClass="HealthComponent" customModule="Magic_Wordz" customModuleProvider="target">
                                                 <rect key="frame" x="125" y="0.0" width="157" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -245,7 +245,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-hN-1eU" userLabel="Buttons Stack">
                                 <rect key="frame" x="50" y="362" width="275" height="244"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-6Q-0uK" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-6Q-0uK" customClass="OptionButton" customModule="Magic_Wordz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -268,7 +268,7 @@
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sss-Gk-9Rv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-72-dCK" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-72-dCK" customClass="OptionButton" customModule="Magic_Wordz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="85" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -291,7 +291,7 @@
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hw-Di-40s"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MBm-C8-MhD" customClass="OptionButton" customModule="Balloon" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MBm-C8-MhD" customClass="OptionButton" customModule="Magic_Wordz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170" width="275" height="74"/>
                                         <color key="backgroundColor" name="secondaryButtonColor"/>
                                         <constraints>
@@ -381,7 +381,7 @@
         <!--Settings View Controller-->
         <scene sceneID="P0j-rp-DNI">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="2eQ-Vh-iEf" customClass="SettingsViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="2eQ-Vh-iEf" customClass="SettingsViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPv-uy-0Pj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +538,7 @@
         <!--Language Selection View Controller-->
         <scene sceneID="7Je-pQ-uOC">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="u1s-uI-Osj" customClass="LanguageSelectionViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="u1s-uI-Osj" customClass="LanguageSelectionViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MqJ-ST-k8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,24 +562,6 @@
                                             <segue destination="18d-y9-rF0" kind="unwind" unwindAction="unwindToSettings:" id="DkE-x5-euo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-jb-CtM">
-                                        <rect key="frame" x="247" y="20" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="18"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="17"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="dismissTapped:" destination="2eQ-Vh-iEf" eventType="touchUpInside" id="rjW-zL-3KW"/>
-                                            <segue destination="18d-y9-rF0" kind="unwind" unwindAction="unwindToMainSegue:" id="y63-VF-UaI"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dil Seçimi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-td-tu0">
                                         <rect key="frame" x="82" y="27" width="146" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -587,12 +569,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FD-hS-USY">
-                                        <rect key="frame" x="131" y="137" width="46" height="30"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FD-hS-USY">
+                                        <rect key="frame" x="44" y="97" width="220" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="18"/>
+                                        <state key="normal" title="English"/>
                                         <connections>
-                                            <action selector="languageButtonTapped:" destination="u1s-uI-Osj" eventType="touchUpInside" id="o35-pP-tCk"/>
+                                            <action selector="languageButtonTapped:" destination="u1s-uI-Osj" eventType="touchUpInside" id="nm9-Vi-8Jv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9f-op-UvZ">
+                                        <rect key="frame" x="44" y="147" width="220" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="18"/>
+                                        <state key="normal" title="Türkçe"/>
+                                        <connections>
+                                            <action selector="languageButtonTapped:" destination="u1s-uI-Osj" eventType="touchUpInside" id="6K4-dr-9D7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -622,7 +614,7 @@
         <!--Ending View Controller-->
         <scene sceneID="5pg-SE-8md">
             <objects>
-                <viewController storyboardIdentifier="Ending" id="ll6-13-mqW" customClass="EndingViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ending" id="ll6-13-mqW" customClass="EndingViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iWy-Ii-W5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -636,7 +628,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-pk-igr" customClass="CountingLabel" customModule="Balloon" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-pk-igr" customClass="CountingLabel" customModule="Magic_Wordz" customModuleProvider="target">
                                 <rect key="frame" x="16" y="101" width="343" height="90"/>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="90"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -859,7 +851,7 @@
         <!--Word List View Controller-->
         <scene sceneID="cFp-pq-YNU">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="FDd-6Q-VH5" customClass="WordListViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="FDd-6Q-VH5" customClass="WordListViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wf1-Mv-RFE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -893,7 +885,7 @@
                                         <rect key="frame" x="8" y="91" width="315" height="505"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" id="Q9K-jH-2ps" customClass="WordCell" customModule="Balloon" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WordCell" id="Q9K-jH-2ps" customClass="WordCell" customModule="Magic_Wordz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="315" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q9K-jH-2ps" id="RWL-st-9nh">
@@ -971,7 +963,7 @@
         <!--Pause View Controller-->
         <scene sceneID="PCQ-ag-tcT">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="b1t-Nc-XyK" customClass="PauseViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="b1t-Nc-XyK" customClass="PauseViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9rj-Fm-7dV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1079,7 +1071,7 @@
         <!--Leaderboard View Controller-->
         <scene sceneID="YfI-ro-uJ8">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="QxW-Qi-gbJ" customClass="LeaderboardViewController" customModule="Balloon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="QxW-Qi-gbJ" customClass="LeaderboardViewController" customModule="Magic_Wordz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wd6-Xg-Pud">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1122,7 +1114,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaderboardCell" rowHeight="50" id="gFd-5d-THr" customClass="LeaderboardCell" customModule="Balloon" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeaderboardCell" rowHeight="50" id="gFd-5d-THr" customClass="LeaderboardCell" customModule="Magic_Wordz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="315" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gFd-5d-THr" id="KAS-Os-jI9">

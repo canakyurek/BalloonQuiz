@@ -21,13 +21,21 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         setLocalizationStrings()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.setLocalizationStrings),
+                                               name: NSNotification.Name(rawValue: NotificationName.LANGUAGE_DID_CHANGE),
+                                               object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func dismissTapped(_ sender: UIButton) {
         performSegue(withIdentifier: "closeSettingsSegue", sender: self)
     }
     
-    private func setLocalizationStrings() {
+    @objc private func setLocalizationStrings() {
         titleLabel.text = Localizable.Settings.title.localized
         howToPlayButton.setTitle(Localizable.Settings.howToPlay.localized,
                                  for: .normal)

@@ -48,15 +48,15 @@ class Scene: SKScene {
         self.scaleMode = .aspectFill
         notificationCenter.addObserver(self,
                                        selector: #selector(self.applyImpulse),
-                                       name: NSNotification.Name("CorrectAnswer"),
+                                       name: NSNotification.Name(NotificationName.CORRECT_ANSWER),
                                        object: nil)
         notificationCenter.addObserver(self,
                                        selector: #selector(self.lowerTheBalloon),
-                                       name: NSNotification.Name("FalseAnswer"),
+                                       name: NSNotification.Name(NotificationName.FALSE_ANSWER),
                                        object: nil)
         notificationCenter.addObserver(self,
                                        selector: #selector(self.knockOffTheBalloon),
-                                       name: NSNotification.Name("EndGame"),
+                                       name: NSNotification.Name(NotificationName.END_GAME),
                                        object: nil)
         setCamera()
         balloon.spawn(on: self,

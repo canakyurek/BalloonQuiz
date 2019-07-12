@@ -19,13 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.init("LanguageDidChange"), object: nil, queue: nil) { _ in
-            if self.language == "tr" {
-                self.language = "en"
-            } else {
-                self.language = "tr"
-            }
-            UserDefaults.standard.setValue(self.language, forKey: "language")
+        NotificationCenter.default.addObserver(
+        forName: NSNotification.Name.init(NotificationName.LANGUAGE_DID_CHANGE),
+        object: nil,
+        queue: nil) { _ in
+            self.language = UserDefaults.standard.value(forKey: "language") as! String
             self.refreshScreens()
         }
         

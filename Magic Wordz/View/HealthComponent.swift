@@ -35,7 +35,7 @@ class HealthComponent: UIView {
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.didLoseHealth(_:)),
-                                               name: Notification.Name.init("FalseAnswer"),
+                                               name: Notification.Name.init(NotificationName.FALSE_ANSWER),
                                                object: nil)
     }
     

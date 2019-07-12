@@ -58,8 +58,6 @@ class GameViewController: UIViewController {
     var corrects = [Answer]()
     var wrongs = [Answer]()
     
-    var musicPlayer: AVAudioPlayer!
-    
     // MARK: - Constants
     
     let notificationCenter = NotificationCenter.default
@@ -83,18 +81,7 @@ class GameViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.adSize = kGADAdSizeBanner
         bannerView.load(GADRequest())
-        DispatchQueue.global().async {
-            self.musicPlayer = AVAudioPlayer()
-            do {
-                if let path = Bundle.main.path(forResource: "bossa", ofType: "mp3"),
-                    let url = URL(string: path) {
-                    self.musicPlayer = try AVAudioPlayer(contentsOf: url)
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-            self.musicPlayer?.numberOfLoops = -1
-        }
+        
         interstitial = createAndLoadInterstitial()
         
         notificationCenter.addObserver(self,
@@ -115,9 +102,8 @@ class GameViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
             setupCoachMarks()
         }
-        DispatchQueue.global().async {
-            self.musicPlayer?.play()
-        }
+        
+        SoundManager.shared.play(.inGame)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -147,7 +133,7 @@ class GameViewController: UIViewController {
             controller.stop(immediately: true)
         }
         
-        musicPlayer?.stop()
+        SoundManager.shared.stop(.inGame)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -249,7 +235,7 @@ class GameViewController: UIViewController {
         choiceButtons.forEach({ $0.isEnabled = false })
         if questions[currentIndex].correctAnswer == sender.tag {
             notificationCenter
-                .post(name: Notification.Name("CorrectAnswer"), object: nil)
+                .post(name: Notification.Name(NotificationName.CORRECT_ANSWER), object: nil)
             sender.backgroundColor = UIColor(named: "green")
             sender.setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
             
@@ -269,7 +255,7 @@ class GameViewController: UIViewController {
             falseCounter += 1
             mediumFeedbackGenerator.impactOccurred()
             let userInfo = ["falseCount": falseCounter]
-            notificationCenter.post(name: Notification.Name("FalseAnswer"),
+            notificationCenter.post(name: Notification.Name(NotificationName.CORRECT_ANSWER),
                                     object: nil,
                                     userInfo: userInfo)
             self.view.layoutIfNeeded()
@@ -303,16 +289,14 @@ class GameViewController: UIViewController {
         self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
         (self.view.viewWithTag(tag) as! UIButton)
             .setTitleColor(UIColor(named: "secondaryButtonColor"), for: .normal)
-        notificationCenter.post(name: Notification.Name("EndGame"), object: nil)
+        notificationCenter.post(name: Notification.Name(NotificationName.END_GAME), object: nil)
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
             self.balloonDidCrash()
         }
     }
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
-        DispatchQueue.global().async {
-            self.musicPlayer?.play()
-        }
+        SoundManager.shared.play(.inGame)
         
         if sender.identifier == "replaySegue" {
             configQuestionList()
@@ -331,7 +315,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func pauseGame() {
-        musicPlayer?.stop()
+        SoundManager.shared.stop(.inGame)
         sceneView.isPaused = true
         if self.view.subviews.contains(blurredView) {
             blurredView.isHidden = false

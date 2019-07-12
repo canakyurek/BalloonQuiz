@@ -3,20 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E04EEA922C6850E00A5907E /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04EEA822C6850E00A5907E /* Routable.swift */; };
-		6E04EEAF22C689DF00A5907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E04EEB122C689DF00A5907E /* Localizable.strings */; };
-		6E04EEB422C68B2500A5907E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E04EEB622C68B2500A5907E /* Localizable.strings */; };
-		6E04EEB822C68BB300A5907E /* LocalizationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */; };
 		6E0C96E4225BEA4000B223B9 /* AirbnbCereal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */; };
 		6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */; };
 		6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D44222EF508005472E7 /* ButtonContainer.swift */; };
 		6E266D49222F081A005472E7 /* ButtonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E266D48222F081A005472E7 /* ButtonContainer.xib */; };
 		6E266D4D222F1281005472E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D4C222F1281005472E7 /* MainViewController.swift */; };
 		6E288797223312A500A6E5FE /* DataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E288796223312A500A6E5FE /* DataText.swift */; };
+		6E3FBD9F22D20EF9002031B1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */; };
 		6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */; };
 		6E43AAF9223529D3008E7986 /* RTRaleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */; };
 		6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */; };
@@ -39,6 +36,10 @@
 		6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB3072C22C40FD3002B99F0 /* GameKit.framework */; };
 		6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */; };
 		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
+		6EBB097122D8DF9000F6EC69 /* LocalizationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB097022D8DF9000F6EC69 /* LocalizationEnums.swift */; };
+		6EBB097322D8DFB300F6EC69 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB097222D8DFB300F6EC69 /* Routable.swift */; };
+		6EBB097622D8DFD600F6EC69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EBB097422D8DFD600F6EC69 /* Localizable.strings */; };
+		6EBB097922D8E20400F6EC69 /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB097822D8E20400F6EC69 /* NotificationData.swift */; };
 		6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */; };
 		6EC1F93122B83EE0002D0CC9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */; };
 		6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */; };
@@ -56,24 +57,21 @@
 		6EFDDE122274CB2300FE7BCE /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */; };
 		6EFDDE142274D6F700FE7BCE /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE132274D6F700FE7BCE /* Answer.swift */; };
 		6EFDDE162274D77B00FE7BCE /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE152274D77B00FE7BCE /* WordCell.swift */; };
-		E29A73F960B7317624664B70 /* Pods_Balloon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */; };
+		7922B9CE77BE322B753BF971 /* Pods_Magic_Wordz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloon.debug.xcconfig"; path = "Target Support Files/Pods-Balloon/Pods-Balloon.debug.xcconfig"; sourceTree = "<group>"; };
-		55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Balloon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E04EEA822C6850E00A5907E /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.debug.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.debug.xcconfig"; sourceTree = "<group>"; };
+		5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.release.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.release.xcconfig"; sourceTree = "<group>"; };
 		6E04EEAB22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		6E04EEAC22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6E04EEB022C689DF00A5907E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6E04EEB522C68B2500A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationEnums.swift; sourceTree = "<group>"; };
 		6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
 		6E0C96E5225BF22E00B223B9 /* AirbnbCereal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Medium.ttf"; sourceTree = "<group>"; };
 		6E266D44222EF508005472E7 /* ButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainer.swift; sourceTree = "<group>"; };
 		6E266D48222F081A005472E7 /* ButtonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContainer.xib; sourceTree = "<group>"; };
 		6E266D4C222F1281005472E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E288796223312A500A6E5FE /* DataText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataText.swift; sourceTree = "<group>"; };
+		6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Bold.ttf"; sourceTree = "<group>"; };
 		6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Regular.ttf"; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		6E97EDAD22399BE80040924B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6E9BB9B822B03B3700B34C15 /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		6EA3F9022233317400BD80FF /* SaveUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUtil.swift; sourceTree = "<group>"; };
-		6EA9807421F0E51E00583C2E /* Balloon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balloon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA9807421F0E51E00583C2E /* Magic Wordz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic Wordz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA9807721F0E51E00583C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EA9807921F0E51E00583C2E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6EA9807C21F0E51E00583C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +97,11 @@
 		6EB3072E22C40FD5002B99F0 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
 		6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoachMarksDataSource.swift"; sourceTree = "<group>"; };
 		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
+		6EBB097022D8DF9000F6EC69 /* LocalizationEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationEnums.swift; sourceTree = "<group>"; };
+		6EBB097222D8DFB300F6EC69 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routable.swift; path = Protocol/Routable.swift; sourceTree = "<group>"; };
+		6EBB097522D8DFD600F6EC69 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6EBB097722D8DFDF00F6EC69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6EBB097822D8E20400F6EC69 /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
 		6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bossa.mp3; sourceTree = "<group>"; };
 		6EC1F93022B83EE0002D0CC9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6EC1F93222B840F8002D0CC9 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -116,7 +119,7 @@
 		6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		6EFDDE132274D6F700FE7BCE /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		6EFDDE152274D77B00FE7BCE /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
-		E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloon.release.xcconfig"; path = "Target Support Files/Pods-Balloon/Pods-Balloon.release.xcconfig"; sourceTree = "<group>"; };
+		C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_Wordz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,30 +129,13 @@
 			files = (
 				6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */,
 				6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */,
-				E29A73F960B7317624664B70 /* Pods_Balloon.framework in Frameworks */,
+				7922B9CE77BE322B753BF971 /* Pods_Magic_Wordz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		384E5E942A2B3D317D4DB1EE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */,
-				E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		6E04EEAA22C688F300A5907E /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				6E04EEA822C6850E00A5907E /* Routable.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		6EA9806B21F0E51E00583C2E = {
 			isa = PBXGroup;
 			children = (
@@ -157,14 +143,14 @@
 				6EA9807621F0E51E00583C2E /* Magic Wordz */,
 				6EA9807521F0E51E00583C2E /* Products */,
 				6EA980B121F13E3800583C2E /* Frameworks */,
-				384E5E942A2B3D317D4DB1EE /* Pods */,
+				F00BCFBAA54C89EE7A18FF89 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		6EA9807521F0E51E00583C2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6EA9807421F0E51E00583C2E /* Balloon.app */,
+				6EA9807421F0E51E00583C2E /* Magic Wordz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +158,9 @@
 		6EA9807621F0E51E00583C2E /* Magic Wordz */ = {
 			isa = PBXGroup;
 			children = (
+				6EBB097422D8DFD600F6EC69 /* Localizable.strings */,
+				6EBB097222D8DFB300F6EC69 /* Routable.swift */,
+				6EBB097022D8DF9000F6EC69 /* LocalizationEnums.swift */,
 				6EC1F92E22B8392F002D0CC9 /* bossa.mp3 */,
 				6E73EAE022B02CF400B0827D /* confetti.json */,
 				6EA9807721F0E51E00583C2E /* AppDelegate.swift */,
@@ -181,10 +170,8 @@
 				6EDE15E421F5B19800906312 /* Source */,
 				6EDE15E221F5B17900906312 /* SpriteSource */,
 				6EA3F9022233317400BD80FF /* SaveUtil.swift */,
-				6E04EEAA22C688F300A5907E /* Protocol */,
-				6E04EEB122C689DF00A5907E /* Localizable.strings */,
-				6E04EEB622C68B2500A5907E /* Localizable.strings */,
-				6E04EEB722C68BB300A5907E /* LocalizationEnums.swift */,
+				6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */,
+				6EBB097822D8E20400F6EC69 /* NotificationData.swift */,
 			);
 			path = "Magic Wordz";
 			sourceTree = "<group>";
@@ -194,7 +181,7 @@
 			children = (
 				6EB3072C22C40FD3002B99F0 /* GameKit.framework */,
 				6EA980B221F13E3800583C2E /* SpriteKit.framework */,
-				55407DC3FE9EA8D6F1480D0E /* Pods_Balloon.framework */,
+				C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,26 +261,35 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		F00BCFBAA54C89EE7A18FF89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */,
+				5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6EA9807321F0E51E00583C2E /* Balloon */ = {
+		6EA9807321F0E51E00583C2E /* Magic Wordz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EA9808621F0E52000583C2E /* Build configuration list for PBXNativeTarget "Balloon" */;
+			buildConfigurationList = 6EA9808621F0E52000583C2E /* Build configuration list for PBXNativeTarget "Magic Wordz" */;
 			buildPhases = (
-				5946C591AF9D57745F8ACB3D /* [CP] Check Pods Manifest.lock */,
+				9D373440ACA8CB0E06EEBE5B /* [CP] Check Pods Manifest.lock */,
 				6EA9807021F0E51E00583C2E /* Sources */,
 				6EA9807121F0E51E00583C2E /* Frameworks */,
 				6EA9807221F0E51E00583C2E /* Resources */,
-				8031441A84AB05BD7FFDD083 /* [CP] Embed Pods Frameworks */,
+				321FA106BE7801200BE2D73C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Balloon;
+			name = "Magic Wordz";
 			productName = Balloon;
-			productReference = 6EA9807421F0E51E00583C2E /* Balloon.app */;
+			productReference = 6EA9807421F0E51E00583C2E /* Magic Wordz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -308,6 +304,7 @@
 				TargetAttributes = {
 					6EA9807321F0E51E00583C2E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 0;
@@ -339,7 +336,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6EA9807321F0E51E00583C2E /* Balloon */,
+				6EA9807321F0E51E00583C2E /* Magic Wordz */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +346,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E04EEB422C68B2500A5907E /* Localizable.strings in Resources */,
 				6EE1E264226F1135008B309C /* PointsComponent.xib in Resources */,
 				6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */,
 				6EE1E266226F1596008B309C /* HealthComponent.xib in Resources */,
@@ -362,8 +358,8 @@
 				6EA9807F21F0E52000583C2E /* Assets.xcassets in Resources */,
 				6EC1F93322B840F8002D0CC9 /* CategoryCell.xib in Resources */,
 				6E0C96E6225BF22E00B223B9 /* AirbnbCereal-Medium.ttf in Resources */,
+				6EBB097622D8DFD600F6EC69 /* Localizable.strings in Resources */,
 				6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */,
-				6E04EEAF22C689DF00A5907E /* Localizable.strings in Resources */,
 				6EA9807D21F0E51E00583C2E /* Main.storyboard in Resources */,
 				6EC1F92F22B8392F002D0CC9 /* bossa.mp3 in Resources */,
 			);
@@ -372,7 +368,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5946C591AF9D57745F8ACB3D /* [CP] Check Pods Manifest.lock */ = {
+		321FA106BE7801200BE2D73C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D373440ACA8CB0E06EEBE5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,39 +400,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Balloon-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Magic Wordz-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8031441A84AB05BD7FFDD083 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Balloon/Pods-Balloon-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Instructions/Instructions.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instructions.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Balloon/Pods-Balloon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -432,18 +417,22 @@
 				6ED0605822CA798300F555F4 /* LanguageSelectionViewController.swift in Sources */,
 				6EFDDE122274CB2300FE7BCE /* WordListViewController.swift in Sources */,
 				6EE1E262226F10DE008B309C /* PointsComponent.swift in Sources */,
+				6EBB097122D8DF9000F6EC69 /* LocalizationEnums.swift in Sources */,
 				6EA3F9032233317400BD80FF /* SaveUtil.swift in Sources */,
 				6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */,
 				6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */,
+				6EBB097322D8DFB300F6EC69 /* Routable.swift in Sources */,
 				6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */,
 				6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */,
 				6EA9808C21F0F00C00583C2E /* Question.swift in Sources */,
 				6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */,
 				6EFDDE142274D6F700FE7BCE /* Answer.swift in Sources */,
+				6E3FBD9F22D20EF9002031B1 /* SoundManager.swift in Sources */,
 				6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */,
 				6ECFCDF32253B7FC009198DD /* Player.swift in Sources */,
 				6EE1E268226F1654008B309C /* HealthComponent.swift in Sources */,
 				6EC1F93522B841E7002D0CC9 /* CategoryCell.swift in Sources */,
+				6EBB097922D8E20400F6EC69 /* NotificationData.swift in Sources */,
 				6E9BB9B922B03B3700B34C15 /* CountingLabel.swift in Sources */,
 				6EA980B521F13F8C00583C2E /* Scene.swift in Sources */,
 				6E8998FE21F1699400AD3A39 /* EndingViewController.swift in Sources */,
@@ -456,31 +445,13 @@
 				6E731FC0224FC0440017C04B /* LeaderboardViewController.swift in Sources */,
 				6EFDDE162274D77B00FE7BCE /* WordCell.swift in Sources */,
 				6E288797223312A500A6E5FE /* DataText.swift in Sources */,
-				6E04EEA922C6850E00A5907E /* Routable.swift in Sources */,
 				6EE1E26A226F2A6F008B309C /* PauseViewController.swift in Sources */,
-				6E04EEB822C68BB300A5907E /* LocalizationEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6E04EEB122C689DF00A5907E /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E04EEB022C689DF00A5907E /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		6E04EEB622C68B2500A5907E /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E04EEB522C68B2500A5907E /* tr */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		6EA9807B21F0E51E00583C2E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -497,6 +468,15 @@
 				6E04EEAC22C689A700A5907E /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6EBB097422D8DFD600F6EC69 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EBB097522D8DFD600F6EC69 /* tr */,
+				6EBB097722D8DFDF00F6EC69 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -622,7 +602,7 @@
 		};
 		6EA9808721F0E52000583C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AFA7C5D39673C2145AE4583 /* Pods-Balloon.debug.xcconfig */;
+			baseConfigurationReference = 1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -639,14 +619,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6EA9808821F0E52000583C2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E19DAB08A240474377150966 /* Pods-Balloon.release.xcconfig */;
+			baseConfigurationReference = 5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -663,7 +643,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_UIKITFORMAC = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -680,7 +660,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EA9808621F0E52000583C2E /* Build configuration list for PBXNativeTarget "Balloon" */ = {
+		6EA9808621F0E52000583C2E /* Build configuration list for PBXNativeTarget "Magic Wordz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EA9808721F0E52000583C2E /* Debug */,

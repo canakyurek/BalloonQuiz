@@ -53,7 +53,7 @@ class LeaderboardViewController: UIViewController {
         leaderboardRequest.identifier = leaderboardID
         leaderboardRequest.loadScores { (scores, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error!.localizedDescription)
             } else {
                 guard let scores = scores else { return }
                 DispatchQueue.main.async {

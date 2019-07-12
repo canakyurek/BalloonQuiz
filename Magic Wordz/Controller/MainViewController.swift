@@ -41,12 +41,20 @@ class MainViewController: UIViewController {
         authenticateUser()
         setupButtons()
         checkForPersonalHighscore()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.setLocalizationStrings),
+                                               name: NSNotification.Name(rawValue: NotificationName.LANGUAGE_DID_CHANGE),
+                                               object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         checkForPersonalHighscore()
+    }
+    
+    @objc func setLocalizationStrings() {
+        playButtonContainer.setTitle(as: Localizable.MainMenu.play.localized)
     }
     
     func checkForPersonalHighscore() {
