@@ -57,12 +57,11 @@
 		6EFDDE122274CB2300FE7BCE /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */; };
 		6EFDDE142274D6F700FE7BCE /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE132274D6F700FE7BCE /* Answer.swift */; };
 		6EFDDE162274D77B00FE7BCE /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDDE152274D77B00FE7BCE /* WordCell.swift */; };
-		7922B9CE77BE322B753BF971 /* Pods_Magic_Wordz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */; };
+		9A70994E50A3CD9EEEA1C303 /* Pods_Magic_Wordz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F661289D5639264A2F80333F /* Pods_Magic_Wordz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.debug.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.debug.xcconfig"; sourceTree = "<group>"; };
-		5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.release.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.release.xcconfig"; sourceTree = "<group>"; };
+		553856B67EBFB023CCBD3633 /* Pods-Magic Wordz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.debug.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.debug.xcconfig"; sourceTree = "<group>"; };
 		6E04EEAB22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		6E04EEAC22C689A700A5907E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6E0C96E3225BEA4000B223B9 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
@@ -119,7 +118,8 @@
 		6EFDDE112274CB2300FE7BCE /* WordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		6EFDDE132274D6F700FE7BCE /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		6EFDDE152274D77B00FE7BCE /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
-		C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_Wordz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3C0B6D876B8BD485307DBC /* Pods-Magic Wordz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic Wordz.release.xcconfig"; path = "Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz.release.xcconfig"; sourceTree = "<group>"; };
+		F661289D5639264A2F80333F /* Pods_Magic_Wordz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_Wordz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 			files = (
 				6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */,
 				6EA980B321F13E3800583C2E /* SpriteKit.framework in Frameworks */,
-				7922B9CE77BE322B753BF971 /* Pods_Magic_Wordz.framework in Frameworks */,
+				9A70994E50A3CD9EEEA1C303 /* Pods_Magic_Wordz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 			children = (
 				6EB3072C22C40FD3002B99F0 /* GameKit.framework */,
 				6EA980B221F13E3800583C2E /* SpriteKit.framework */,
-				C46E4E7723FF10FDB7830B30 /* Pods_Magic_Wordz.framework */,
+				F661289D5639264A2F80333F /* Pods_Magic_Wordz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,8 +264,8 @@
 		F00BCFBAA54C89EE7A18FF89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */,
-				5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */,
+				553856B67EBFB023CCBD3633 /* Pods-Magic Wordz.debug.xcconfig */,
+				AA3C0B6D876B8BD485307DBC /* Pods-Magic Wordz.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -277,11 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EA9808621F0E52000583C2E /* Build configuration list for PBXNativeTarget "Magic Wordz" */;
 			buildPhases = (
-				9D373440ACA8CB0E06EEBE5B /* [CP] Check Pods Manifest.lock */,
+				4A7853EA38F09775D32C52B5 /* [CP] Check Pods Manifest.lock */,
 				6EA9807021F0E51E00583C2E /* Sources */,
 				6EA9807121F0E51E00583C2E /* Frameworks */,
 				6EA9807221F0E51E00583C2E /* Resources */,
-				321FA106BE7801200BE2D73C /* [CP] Embed Pods Frameworks */,
+				1FBE9C70C646FB91A5583DFD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,7 +368,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		321FA106BE7801200BE2D73C /* [CP] Embed Pods Frameworks */ = {
+		1FBE9C70C646FB91A5583DFD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,7 +385,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magic Wordz/Pods-Magic Wordz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D373440ACA8CB0E06EEBE5B /* [CP] Check Pods Manifest.lock */ = {
+		4A7853EA38F09775D32C52B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -602,7 +602,7 @@
 		};
 		6EA9808721F0E52000583C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C2D2396DC1F9A6FC7095B93 /* Pods-Magic Wordz.debug.xcconfig */;
+			baseConfigurationReference = 553856B67EBFB023CCBD3633 /* Pods-Magic Wordz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -626,7 +626,7 @@
 		};
 		6EA9808821F0E52000583C2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5471CA028CD9F7AEA498071C /* Pods-Magic Wordz.release.xcconfig */;
+			baseConfigurationReference = AA3C0B6D876B8BD485307DBC /* Pods-Magic Wordz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -9,11 +9,6 @@
 
 import UIKit
 
-enum LanguageButton: Int {
-    case turkish = 2
-    case english = 1
-}
-
 class LanguageSelectionViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
