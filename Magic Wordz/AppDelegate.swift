@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var language = ""
+    var language = UserDefaults.standard.value(forKey: "language") as? String
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         forName: NSNotification.Name.init(NotificationName.LANGUAGE_DID_CHANGE),
         object: nil,
         queue: nil) { _ in
-            self.language = UserDefaults.standard.value(forKey: "language") as! String
+            if self.language == nil {
+                self.language = "tr"
+                UserDefaults.standard.set(self.language, forKey: "language")
+            }
             self.refreshScreens()
         }
         

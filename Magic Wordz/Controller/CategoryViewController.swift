@@ -14,6 +14,7 @@ class CategoryViewController: UIViewController {
     
     var questions: [Question]?
     var dataSource = ["1", "1", "1", "1"]
+    var isDone = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
+        cell.isDone = indexPath.row == 2
         cell.isFirst = indexPath.row == (dataSource.count - 1)
         
         return cell
