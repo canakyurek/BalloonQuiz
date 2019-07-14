@@ -255,7 +255,7 @@ class GameViewController: UIViewController {
             falseCounter += 1
             mediumFeedbackGenerator.impactOccurred()
             let userInfo = ["falseCount": falseCounter]
-            notificationCenter.post(name: Notification.Name(NotificationName.CORRECT_ANSWER),
+            notificationCenter.post(name: Notification.Name(NotificationName.FALSE_ANSWER),
                                     object: nil,
                                     userInfo: userInfo)
             self.view.layoutIfNeeded()

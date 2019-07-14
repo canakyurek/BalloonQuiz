@@ -21,33 +21,32 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomImage" translatesAutoresizingMaskIntoConstraints="NO" id="VfB-Ex-MFS">
                                 <rect key="frame" x="-78" y="354" width="532" height="313"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="VfB-Ex-MFS" secondAttribute="height" multiplier="532:313" id="7FO-il-3hG"/>
+                                    <constraint firstAttribute="height" constant="313" id="NXJ-Fn-R4I"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleImage" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-0q-2bI">
                                 <rect key="frame" x="42" y="218" width="290" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="fOw-0q-2bI" secondAttribute="height" multiplier="145:64" id="tHx-Yd-bsJ"/>
+                                    <constraint firstAttribute="height" constant="128" id="VLH-KA-ezv"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="U7O-yn-aye">
-                                <rect key="frame" x="-116" y="70" width="228" height="241"/>
+                                <rect key="frame" x="-116" y="70" width="228" height="211"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="U7O-yn-aye" secondAttribute="height" multiplier="228:241" id="MeD-qc-b9b"/>
+                                    <constraint firstAttribute="width" constant="228" id="mx5-CC-oSz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0078431372550000003" green="0.71764705880000002" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="U7O-yn-aye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2fN-Dw-DkY"/>
-                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="top" secondItem="U7O-yn-aye" secondAttribute="bottom" constant="43" id="3fq-ex-3Ib"/>
-                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5aA-T1-r3c"/>
-                            <constraint firstItem="U7O-yn-aye" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-116" id="BBQ-Uk-k6P"/>
-                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-78" id="BMQ-S7-WZe"/>
-                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="top" secondItem="fOw-0q-2bI" secondAttribute="bottom" constant="8" id="Dn6-i1-KuB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOw-0q-2bI" secondAttribute="trailing" constant="43" id="nPO-of-qOR"/>
-                            <constraint firstAttribute="trailing" secondItem="VfB-Ex-MFS" secondAttribute="trailing" constant="-79" id="uyP-rj-tHk"/>
-                            <constraint firstItem="fOw-0q-2bI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="vq8-wh-gF7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOw-0q-2bI" secondAttribute="trailing" constant="43" id="0MI-6q-z47"/>
+                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="14n-9m-f07"/>
+                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-78" id="7oD-b9-6qR"/>
+                            <constraint firstAttribute="trailing" secondItem="VfB-Ex-MFS" secondAttribute="trailing" constant="-79" id="Yl4-BZ-OyD"/>
+                            <constraint firstItem="U7O-yn-aye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="dgt-GQ-AcZ"/>
+                            <constraint firstItem="VfB-Ex-MFS" firstAttribute="top" secondItem="fOw-0q-2bI" secondAttribute="bottom" constant="8" id="lfT-yo-x7e"/>
+                            <constraint firstItem="U7O-yn-aye" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-116" id="x6H-CD-OnY"/>
+                            <constraint firstItem="fOw-0q-2bI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="xSO-Hg-DVq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
