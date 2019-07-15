@@ -16,7 +16,15 @@ class GameViewController: UIViewController {
 
     // MARK: - Outlet connections
     
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel! {
+        didSet {
+            questionLabel.layer.shadowColor = UIColor.black.cgColor
+            questionLabel.layer.shadowRadius = 3.0
+            questionLabel.layer.shadowOpacity = 0.4
+            questionLabel.layer.shadowOffset = CGSize(width: 4, height: 4)
+            questionLabel.layer.masksToBounds = false
+        }
+    }
     @IBOutlet var choiceButtons: [UIButton]!
     @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var bannerView: GADBannerView!
@@ -96,6 +104,13 @@ class GameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        choiceButtons.forEach {
+            $0.layer.shadowColor = UIColor.black.cgColor
+            $0.layer.shadowRadius = 3.0
+            $0.layer.shadowOpacity = 0.2
+            $0.layer.shadowOffset = CGSize(width: 0, height: 3)
+            $0.layer.masksToBounds = false
+        }
         // Check if the app launched for the first time.
         // If so, present coach mark.
         if UserDefaults.standard.bool(forKey: "hasLaunchedOnce") == false {

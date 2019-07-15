@@ -28,3 +28,4 @@
 "kWordList" = "Kelime Listesi";
 "kKnown" = "Bilinenler";
 "kUnknown" = "Bilinemeyenler";
+"kGameCenterAuthError" = "Liderlik tablosunu görmek için GameCenter'a oturum açın.";

@@ -14,6 +14,15 @@ class PauseViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var backToMenuButton: UIButton!
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.layer.shadowColor = UIColor.black.cgColor
+            contentView.layer.shadowRadius = 3.0
+            contentView.layer.shadowOpacity = 0.2
+            contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+            contentView.layer.masksToBounds = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -40,6 +40,7 @@ enum Localizable {
         case wordList = "kWordList"
         case known = "kKnown"
         case unknown = "kUnknown"
+        case gameCenterAuth = "kGameCenterAuthError"
     }
 }
 

@@ -19,6 +19,7 @@ class BalloonNode: SKSpriteNode {
         parentNode.addChild(self)
         self.position = position
         self.size = size
+        self.zPosition = 2
         setupPhysicsBody()
         self.anchorPoint = CGPoint(x: 0.5, y: 0)
         self.color = .yellow

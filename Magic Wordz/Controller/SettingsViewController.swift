@@ -14,6 +14,15 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var howToPlayButton: UIButton!
     @IBOutlet weak var volumeButton: UIButton!
     @IBOutlet weak var languageButton: UIButton!
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.layer.shadowColor = UIColor.black.cgColor
+            contentView.layer.shadowRadius = 3.0
+            contentView.layer.shadowOpacity = 0.2
+            contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+            contentView.layer.masksToBounds = false
+        }
+    }
     
     @IBAction func unwindToSettings(_ sender: UIStoryboardSegue) {}
     

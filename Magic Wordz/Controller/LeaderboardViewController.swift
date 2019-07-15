@@ -16,6 +16,16 @@ class LeaderboardViewController: UIViewController {
     let leaderboardID = "highscores"
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.layer.shadowColor = UIColor.black.cgColor
+            contentView.layer.shadowRadius = 3.0
+            contentView.layer.shadowOpacity = 0.2
+            contentView.layer.shadowOffset = CGSize(width: 0, height: 3)
+            contentView.layer.masksToBounds = false
+        }
+    }
     
     @IBOutlet weak var indicator: UIActivityIndicatorView! {
         didSet {
@@ -47,22 +57,29 @@ class LeaderboardViewController: UIViewController {
     }
     
     func obtainLeaderboard() {
-        let leaderboardRequest = GKLeaderboard()
-        leaderboardRequest.playerScope = .global
-        leaderboardRequest.timeScope = .allTime
-        leaderboardRequest.identifier = leaderboardID
-        leaderboardRequest.loadScores { (scores, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                guard let scores = scores else { return }
-                DispatchQueue.main.async {
-                    self.dataList = scores
-                    self.indicator.stopAnimating()
-                    self.tableView.reloadData()
+        infoLabel.isHidden = GKLocalPlayer.local.isAuthenticated
+        if GKLocalPlayer.local.isAuthenticated {
+            let leaderboardRequest = GKLeaderboard()
+            leaderboardRequest.playerScope = .global
+            leaderboardRequest.timeScope = .allTime
+            leaderboardRequest.identifier = leaderboardID
+            leaderboardRequest.loadScores { (scores, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    guard let scores = scores else { return }
+                    DispatchQueue.main.async {
+                        self.dataList = scores
+                        self.indicator.stopAnimating()
+                        self.tableView.reloadData()
+                    }
                 }
             }
+        } else {
+            self.indicator.stopAnimating()
+            infoLabel.text = Localizable.SideEndings.gameCenterAuth.localized
         }
+        
     }
     
     @IBAction func dismissTapped(_ sender: UIButton) {

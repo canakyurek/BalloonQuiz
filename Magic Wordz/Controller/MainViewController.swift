@@ -11,6 +11,7 @@ import GameKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var balloonView: UIView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
         didSet {
@@ -55,6 +56,20 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         
         checkForPersonalHighscore()
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       options: [.autoreverse, .repeat],
+                       animations: {
+                        self.balloonView.transform = CGAffineTransform(translationX: 0, y: 5)
+                        self.balloonView.transform = CGAffineTransform(rotationAngle: .pi / 64)
+                        self.balloonView.transform = CGAffineTransform(translationX: 0, y: -5)
+                        self.balloonView.transform = CGAffineTransform(scaleX: 1, y: 0.5)
+                        self.balloonView.transform = CGAffineTransform(translationX: 0, y: 5)
+                        self.balloonView.transform = CGAffineTransform(rotationAngle: -(.pi / 64))
+                        self.balloonView.transform = CGAffineTransform(translationX: 0, y: -5)
+                        self.balloonView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                        
+        })
     }
     
     @objc func setLocalizationStrings() {

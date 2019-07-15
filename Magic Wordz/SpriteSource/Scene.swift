@@ -18,6 +18,7 @@ class Scene: SKScene {
     var sceneCamera: SKCameraNode!
     var floor: SKSpriteNode!
     let balloon = BalloonNode()
+    lazy var helicopter = Helicopter()
     let notificationCenter = NotificationCenter.default
     weak var sceneDelegate: GameSceneDelegate?
     
@@ -42,9 +43,36 @@ class Scene: SKScene {
         self.camera = sceneCamera
     }
     
+    func setBackground() {
+        let topColor = CIColor(cgColor: UIColor(named: "sky2")!.cgColor)
+        let bottomColor = CIColor(cgColor: UIColor(named: "sky1")!.cgColor)
+        
+        let texture = SKTexture(size: CGSize(width: self.frame.width, height: 5000), color1: bottomColor, color2: topColor)
+        texture.filteringMode = .nearest
+        let sprite = SKSpriteNode(texture: texture)
+        sprite.position = CGPoint(x: self.frame.midX, y: 2500)
+        sprite.size.width = self.frame.width
+        sprite.size.height = CGFloat(5000)
+        sprite.zPosition = -1
+        addChild(sprite)
+    }
+    
+    func addBackground() {
+        let topColor = CIColor(cgColor: UIColor(named: "sky2")!.cgColor)
+        let bottomColor = CIColor(cgColor: UIColor(named: "sky3")!.cgColor)
+        
+        let texture = SKTexture(size: CGSize(width: self.frame.width, height: 5000), color1: topColor, color2: bottomColor)
+        texture.filteringMode = .nearest
+        let sprite = SKSpriteNode(texture: texture)
+        sprite.position = CGPoint(x: self.frame.midX, y: 7000)
+        sprite.size.width = self.frame.width
+        sprite.size.height = CGFloat(5000)
+        sprite.zPosition = -1
+        addChild(sprite)
+    }
+    
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
-        self.backgroundColor = .clear
         self.scaleMode = .aspectFill
         notificationCenter.addObserver(self,
                                        selector: #selector(self.applyImpulse),
@@ -58,11 +86,17 @@ class Scene: SKScene {
                                        selector: #selector(self.knockOffTheBalloon),
                                        name: NSNotification.Name(NotificationName.END_GAME),
                                        object: nil)
+        setBackground()
+        addBackground()
         setCamera()
+        setupFloor()
         balloon.spawn(on: self,
                       position: CGPoint(x: 40, y: 500),
                       size: CGSize(width: 70, height: 100))
-        setupFloor()
+        helicopter.spawn(on: self,
+                         position: CGPoint(x: 200, y: 600),
+                         size: CGSize(width: 142, height: 55))
+        
         self.addCloudsAtRandomPositions()
     }
     
@@ -82,18 +116,21 @@ class Scene: SKScene {
     }
     
     func addCloudsAtRandomPositions() {
-        for i in 0..<80 {
+        // There are 100 clouds.
+        // Set random cloud sizes while keeping aspect ratio for each of them.
+        //
+        for _ in 0..<100 {
             let cloud = SKSpriteNode(imageNamed: "cloud")
-            cloud.size = CGSize(width: cloud.size.height * 1.5,
-                                height: CGFloat(Int.random(in: 5...100)))
-            let yCoordinate = i == 0 ? 300 : 300 + i + Int(cloud.size.height) * 40
+            cloud.size = CGSize(width: cloud.size.height * 1.8,
+                                height: CGFloat(50))
+            let yCoordinate = 300 + CGFloat(Int.random(in: 0...10000))
             cloud.position = CGPoint(x: CGFloat(Int.random(in: 0...300)),
                                      y: CGFloat(yCoordinate))
-            
-            cloud.zPosition = Int.random(in: 0..<2) == 1 ? 1 : -1
-            cloud.color = .gray
+            cloud.zPosition = 1
+            cloud.alpha = CGFloat.random(in: 0.50...1.0)
             self.addChild(cloud)
         }
+      
     }
     
     @objc func applyImpulse() {

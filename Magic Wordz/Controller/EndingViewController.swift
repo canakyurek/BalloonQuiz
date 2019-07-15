@@ -100,7 +100,7 @@ class EndingViewController: UIViewController {
                 if error != nil {
                     print(error!.localizedDescription)
                 } else {
-                    print("Score reported: \(self.score)")
+                    
                 }
             }
         }

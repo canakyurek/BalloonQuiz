@@ -28,5 +28,7 @@
 "kKnown" = "Known";
 "kUnknown" = "Unknown";
 
+"kGameCenterAuthError" = "To see the leaderboard, login to GameCenter.";
+
 
 
