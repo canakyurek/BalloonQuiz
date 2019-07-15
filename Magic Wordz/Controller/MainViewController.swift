@@ -11,13 +11,17 @@ import GameKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var playButtonContainer: ButtonContainer!
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
         didSet {
             activityIndicator.hidesWhenStopped = true
         }
     }
     @IBOutlet weak var personalHighScoreLabel: UILabel!
+    
+    @IBAction func playButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "chooseCategorySegue", sender: self)
+    }
     
     @IBAction func settingsTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "settingsSegue", sender: self)
@@ -54,7 +58,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func setLocalizationStrings() {
-        playButtonContainer.setTitle(as: Localizable.MainMenu.play.localized)
+        playButton.setTitle(Localizable.MainMenu.play.localized, for: .normal)
     }
     
     func checkForPersonalHighscore() {
@@ -67,12 +71,7 @@ class MainViewController: UIViewController {
     }
     
     func setupButtons() {
-        playButtonContainer.setTitle(as: Localizable.MainMenu.play.localized)
-        playButtonContainer.setIconImage(named: .play)
-        playButtonContainer.tapAction = { [weak self] in
-            guard let `self` = self else { return }
-            self.performSegue(withIdentifier: "chooseCategorySegue", sender: self)
-        }
+        playButton.setTitle(Localizable.MainMenu.play.localized, for: .normal)
 
     }
     

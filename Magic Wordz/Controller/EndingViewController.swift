@@ -72,6 +72,7 @@ class EndingViewController: UIViewController {
         super.viewDidAppear(animated)
         
         postHighscore()
+        setHighscore()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,22 +83,25 @@ class EndingViewController: UIViewController {
         }
     }
     
+    func setHighscore() {
+        highscoreValue = UserDefaults.standard.integer(forKey: "highscore")
+        if score > highscoreValue {
+            highscoreValue = score
+            highscoreLabel.text = "\(highscoreValue)"
+            UserDefaults.standard.set(highscoreValue, forKey: "highscore")
+        }
+    }
+    
     func postHighscore() {
         if GKLocalPlayer.local.isAuthenticated {
-            highscoreValue = UserDefaults.standard.integer(forKey: "highscore")
-            if score > highscoreValue {
-                highscoreValue = score
-                highscoreLabel.text = "\(highscoreValue)"
-                let gkScore = GKScore(leaderboardIdentifier: leaderboardID)
-                gkScore.value = Int64(score)
-                GKScore.report([gkScore]) { error in
-                    if error != nil {
-                        print(error!.localizedDescription)
-                    } else {
-                        print("Score reported: \(self.score)")
-                    }
+            let gkScore = GKScore(leaderboardIdentifier: leaderboardID)
+            gkScore.value = Int64(score)
+            GKScore.report([gkScore]) { error in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    print("Score reported: \(self.score)")
                 }
-                UserDefaults.standard.set(highscoreValue, forKey: "highscore")
             }
         }
     }
