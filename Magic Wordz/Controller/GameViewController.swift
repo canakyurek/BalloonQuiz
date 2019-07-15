@@ -346,6 +346,7 @@ class GameViewController: UIViewController {
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
         stopTimer()
+        SoundManager.shared.stop(.inGame)
         heavyFeedbackGenerator.impactOccurred()
         choiceButtons.forEach({ $0.isEnabled = false })
         self.pauseButton.isEnabled = false

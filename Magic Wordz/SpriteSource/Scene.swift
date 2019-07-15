@@ -64,7 +64,7 @@ class Scene: SKScene {
         let texture = SKTexture(size: CGSize(width: self.frame.width, height: 5000), color1: topColor, color2: bottomColor)
         texture.filteringMode = .nearest
         let sprite = SKSpriteNode(texture: texture)
-        sprite.position = CGPoint(x: self.frame.midX, y: 7000)
+        sprite.position = CGPoint(x: self.frame.midX, y: 7500)
         sprite.size.width = self.frame.width
         sprite.size.height = CGFloat(5000)
         sprite.zPosition = -1
