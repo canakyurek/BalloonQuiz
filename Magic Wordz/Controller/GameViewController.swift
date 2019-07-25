@@ -110,6 +110,7 @@ class GameViewController: UIViewController {
             $0.layer.shadowOpacity = 0.2
             $0.layer.shadowOffset = CGSize(width: 0, height: 3)
             $0.layer.masksToBounds = false
+            $0.isExclusiveTouch = true
         }
         // Check if the app launched for the first time.
         // If so, present coach mark.
