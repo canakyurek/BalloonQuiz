@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LuckiestGuy-Regular.ttf">
+            <string>LuckiestGuy-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="8W2-SQ-1Vf" customClass="CategoryCell" customModule="Magic_Wordz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-Dc-AIl">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="125"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="125" id="ghN-Jp-3sx"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_example" translatesAutoresizingMaskIntoConstraints="NO" id="d06-Er-SzL">
+                        <rect key="frame" x="15" y="15" width="95" height="95"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="95" id="0J0-C5-WoR"/>
+                            <constraint firstAttribute="width" constant="95" id="AFS-UD-j8R"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUSIC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-62-IgM">
+                        <rect key="frame" x="130" y="23" width="228" height="36"/>
+                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="36"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makes the people come together" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngI-jy-LbR">
+                        <rect key="frame" x="130" y="56" width="228" height="32"/>
+                        <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_dot" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-pw-ReQ">
+                        <rect key="frame" x="171" y="135" width="36" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="7PU-zO-Pup"/>
+                            <constraint firstAttribute="width" constant="36" id="y2w-B4-nBv"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ae2-7W-sZG">
+                        <rect key="frame" x="15" y="15" width="95" height="95"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="95" id="Cga-el-VJh"/>
+                            <constraint firstAttribute="height" constant="95" id="SRG-bF-t9V"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-2b-Eum">
+                        <rect key="frame" x="84" y="79" width="32" height="32"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="efn-ws-SV4"/>
+                            <constraint firstAttribute="width" constant="32" id="w43-Li-r3z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8KB-Dc-AIl" secondAttribute="trailing" id="4OE-Mc-9Gd"/>
+                <constraint firstAttribute="bottom" secondItem="EqD-2b-Eum" secondAttribute="bottom" constant="69" id="6VC-UM-Eh9"/>
+                <constraint firstItem="ae2-7W-sZG" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" constant="15" id="6wa-CZ-QWI"/>
+                <constraint firstItem="ACH-pw-ReQ" firstAttribute="top" secondItem="8KB-Dc-AIl" secondAttribute="bottom" constant="10" id="AwH-Pg-h8d"/>
+                <constraint firstItem="ngI-jy-LbR" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" constant="56" id="Bdg-Md-HTC"/>
+                <constraint firstItem="8KB-Dc-AIl" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" id="Dc5-AD-7S9"/>
+                <constraint firstItem="ACH-pw-ReQ" firstAttribute="centerX" secondItem="8W2-SQ-1Vf" secondAttribute="centerX" id="FGf-2d-ZjQ"/>
+                <constraint firstItem="8KB-Dc-AIl" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" id="Fqd-JI-u0C"/>
+                <constraint firstAttribute="trailing" secondItem="ngI-jy-LbR" secondAttribute="trailing" constant="20" id="Igw-z0-8Aj"/>
+                <constraint firstItem="ae2-7W-sZG" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" constant="15" id="LXe-2t-8MU"/>
+                <constraint firstItem="d06-Er-SzL" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" constant="15" id="PIF-JF-4Bi"/>
+                <constraint firstItem="OQr-62-IgM" firstAttribute="top" secondItem="8W2-SQ-1Vf" secondAttribute="top" constant="23" id="Uo5-zv-or9"/>
+                <constraint firstAttribute="bottom" secondItem="ACH-pw-ReQ" secondAttribute="bottom" constant="10" id="Upe-qD-aOm"/>
+                <constraint firstItem="d06-Er-SzL" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" constant="15" id="WPQ-Ea-ay0"/>
+                <constraint firstItem="EqD-2b-Eum" firstAttribute="leading" secondItem="8W2-SQ-1Vf" secondAttribute="leading" constant="84" id="WeF-WA-hnC"/>
+                <constraint firstItem="OQr-62-IgM" firstAttribute="leading" secondItem="d06-Er-SzL" secondAttribute="trailing" constant="20" id="dYU-Rl-piJ"/>
+                <constraint firstAttribute="trailing" secondItem="OQr-62-IgM" secondAttribute="trailing" constant="20" id="tbR-TY-klz"/>
+                <constraint firstItem="ngI-jy-LbR" firstAttribute="leading" secondItem="d06-Er-SzL" secondAttribute="trailing" constant="20" id="wmo-u1-ige"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="LV0-NN-kQW"/>
+            <size key="customSize" width="378" height="186"/>
+            <connections>
+                <outlet property="containerView" destination="8KB-Dc-AIl" id="v4F-nB-oem"/>
+                <outlet property="descriptionLabel" destination="ngI-jy-LbR" id="fSI-OG-hGr"/>
+                <outlet property="doneView" destination="ae2-7W-sZG" id="PIC-JI-puL"/>
+                <outlet property="dotImageView" destination="ACH-pw-ReQ" id="x3i-y3-a9K"/>
+                <outlet property="imageView" destination="d06-Er-SzL" id="1vM-Qg-BEy"/>
+                <outlet property="levelLabel" destination="EqD-2b-Eum" id="WAd-II-8zg"/>
+                <outlet property="titleLabel" destination="OQr-62-IgM" id="WMz-xE-Mi4"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="-71.651785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="category_dot" width="12" height="34"/>
+        <image name="category_example" width="95" height="95"/>
+        <namedColor name="yellow">
+            <color red="0.94901960784313721" green="0.74117647058823533" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

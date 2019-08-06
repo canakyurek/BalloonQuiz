@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  Magic Wordz
+
+  Created by Can Akyurek on 28.06.2019.
+  Copyright © 2019 Can Akyurek. All rights reserved.
+*/
+
+"kPlay" = "Play";
+"kPersonalRecord" = "Personal Record";
+"kSettings" = "SETTINGS";
+"kHowToPlay" = "HOW TO PLAY";
+"kVolume" = "VOLUME";
+"kLanguage" = "Language";
+
+"kPaused" = "PAUSED";
+"kContinue" = "Continue";
+"kRestart" = "Restart";
+"kBackToMenu" = "Back to menu";
+
+"kScore" = "Score";
+"kHighScore" = "High Score";
+"kFlightTime" = "Flight Time";
+"kCorrectCount" = "Correct Count";
+
+"kLeaderboard" = "Leaderboard";
+"kWordList" = "Word List";
+"kKnown" = "Known";
+"kUnknown" = "Unknown";
+
+"kGameCenterAuthError" = "To see the leaderboard, login to GameCenter.";
+
+
+
