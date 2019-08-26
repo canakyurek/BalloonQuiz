@@ -118,8 +118,7 @@ class GameViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
             setupCoachMarks()
         }
-        
-        SoundManager.shared.play(.inGame)
+        MusicPlayer.shared.playInGameSound()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,8 +147,7 @@ class GameViewController: UIViewController {
         if let controller = coachMarksController {
             controller.stop(immediately: true)
         }
-        
-        SoundManager.shared.stop(.inGame)
+        MusicPlayer.shared.stop()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -312,7 +310,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func unwindToGameScene(_ sender: UIStoryboardSegue) {
-        SoundManager.shared.play(.inGame)
+        MusicPlayer.shared.playInGameSound()
         
         if sender.identifier == "replaySegue" {
             configQuestionList()
@@ -331,7 +329,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func pauseGame() {
-        SoundManager.shared.stop(.inGame)
+        MusicPlayer.shared.pause()
         sceneView.isPaused = true
         if self.view.subviews.contains(blurredView) {
             blurredView.isHidden = false
@@ -347,7 +345,7 @@ class GameViewController: UIViewController {
 extension GameViewController: GameSceneDelegate {
     func balloonDidCrash() {
         stopTimer()
-        SoundManager.shared.stop(.inGame)
+        MusicPlayer.shared.stop()
         heavyFeedbackGenerator.impactOccurred()
         choiceButtons.forEach({ $0.isEnabled = false })
         self.pauseButton.isEnabled = false

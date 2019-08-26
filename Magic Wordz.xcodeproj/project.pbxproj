@@ -13,7 +13,7 @@
 		6E266D49222F081A005472E7 /* ButtonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E266D48222F081A005472E7 /* ButtonContainer.xib */; };
 		6E266D4D222F1281005472E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E266D4C222F1281005472E7 /* MainViewController.swift */; };
 		6E288797223312A500A6E5FE /* DataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E288796223312A500A6E5FE /* DataText.swift */; };
-		6E3FBD9F22D20EF9002031B1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */; };
+		6E3FBD9F22D20EF9002031B1 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3FBD9E22D20EF9002031B1 /* MusicPlayer.swift */; };
 		6E43AAF6223529C1008E7986 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */; };
 		6E43AAF9223529D3008E7986 /* RTRaleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */; };
 		6E43AAFA223529D3008E7986 /* RTRaleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */; };
@@ -72,7 +72,7 @@
 		6E266D48222F081A005472E7 /* ButtonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContainer.xib; sourceTree = "<group>"; };
 		6E266D4C222F1281005472E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E288796223312A500A6E5FE /* DataText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataText.swift; sourceTree = "<group>"; };
-		6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		6E3FBD9E22D20EF9002031B1 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		6E43AAF5223529C1008E7986 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		6E43AAF7223529D3008E7986 /* RTRaleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Bold.ttf"; sourceTree = "<group>"; };
 		6E43AAF8223529D3008E7986 /* RTRaleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTRaleway-Regular.ttf"; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				6EDE15E421F5B19800906312 /* Source */,
 				6EDE15E221F5B17900906312 /* SpriteSource */,
 				6EA3F9022233317400BD80FF /* SaveUtil.swift */,
-				6E3FBD9E22D20EF9002031B1 /* SoundManager.swift */,
+				6E3FBD9E22D20EF9002031B1 /* MusicPlayer.swift */,
 				6EBB097822D8E20400F6EC69 /* NotificationData.swift */,
 				6EFE1A2E22DC939A00D68256 /* SKTextureExtension.swift */,
 			);
@@ -433,7 +433,7 @@
 				6EA9808C21F0F00C00583C2E /* Question.swift in Sources */,
 				6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */,
 				6EFDDE142274D6F700FE7BCE /* Answer.swift in Sources */,
-				6E3FBD9F22D20EF9002031B1 /* SoundManager.swift in Sources */,
+				6E3FBD9F22D20EF9002031B1 /* MusicPlayer.swift in Sources */,
 				6EBD958622DC89F2007F5257 /* Helicopter.swift in Sources */,
 				6E266D45222EF508005472E7 /* ButtonContainer.swift in Sources */,
 				6ECFCDF32253B7FC009198DD /* Player.swift in Sources */,
