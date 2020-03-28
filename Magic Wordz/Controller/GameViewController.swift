@@ -112,12 +112,7 @@ class GameViewController: UIViewController {
             $0.layer.masksToBounds = false
             $0.isExclusiveTouch = true
         }
-        // Check if the app launched for the first time.
-        // If so, present coach mark.
-        if UserDefaults.standard.bool(forKey: "hasLaunchedOnce") == false {
-            UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
-            setupCoachMarks()
-        }
+
         MusicPlayer.shared.playInGameSound()
     }
     
@@ -127,26 +122,9 @@ class GameViewController: UIViewController {
         self.pauseButton.isEnabled = true
     }
     
-
-    
-    func setupCoachMarks() {
-        coachMarksController = CoachMarksController()
-        self.coachMarksController!.dataSource = self
-        self.coachMarksController!.delegate = self
-        let skipView = CoachMarkSkipDefaultView()
-        skipView.setTitle("Atla", for: .normal)
-        self.coachMarksController!.skipView = skipView
-        self.coachMarksController!.overlay.allowTap = true
-        self.coachMarksController!.start(in: .window(over: self))
-        sceneView.isPaused = true
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        if let controller = coachMarksController {
-            controller.stop(immediately: true)
-        }
+
         MusicPlayer.shared.stop()
     }
     
@@ -297,7 +275,7 @@ class GameViewController: UIViewController {
     }
     
     func endGame() {
-        guard var questions = questions else { return }
+        guard let questions = questions else { return }
         stopTimer()
         let tag = questions[currentIndex].correctAnswer
         self.view.viewWithTag(tag)?.backgroundColor = UIColor(named: "green")
@@ -349,7 +327,7 @@ extension GameViewController: GameSceneDelegate {
         heavyFeedbackGenerator.impactOccurred()
         choiceButtons.forEach({ $0.isEnabled = false })
         self.pauseButton.isEnabled = false
-        guard var questions = questions else { return }
+        guard let questions = questions else { return }
         let tag = questions[currentIndex].correctAnswer
         Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { [weak self] _ in
             guard let `self` = self else { return }

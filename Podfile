@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'Magic Wordz' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,6 +7,4 @@ target 'Magic Wordz' do
 
   # Pods for Balloon
   pod 'Google-Mobile-Ads-SDK'
-  pod 'Instructions', '~> 1.3.0'
-  pod 'lottie-ios'
 end
