@@ -33,7 +33,6 @@
 		6EA980B521F13F8C00583C2E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B421F13F8C00583C2E /* Scene.swift */; };
 		6EA980B721F1418400583C2E /* BalloonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA980B621F1418400583C2E /* BalloonNode.swift */; };
 		6EB3072D22C40FD3002B99F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB3072C22C40FD3002B99F0 /* GameKit.framework */; };
-		6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */; };
 		6EB900A92254070300F64CC9 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB900A82254070300F64CC9 /* LeaderboardCell.swift */; };
 		6EBB097122D8DF9000F6EC69 /* LocalizationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB097022D8DF9000F6EC69 /* LocalizationEnums.swift */; };
 		6EBB097322D8DFB300F6EC69 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB097222D8DFB300F6EC69 /* Routable.swift */; };
@@ -95,7 +94,6 @@
 		6EA980B621F1418400583C2E /* BalloonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonNode.swift; sourceTree = "<group>"; };
 		6EB3072C22C40FD3002B99F0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6EB3072E22C40FD5002B99F0 /* Balloon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloon.entitlements; sourceTree = "<group>"; };
-		6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoachMarksDataSource.swift"; sourceTree = "<group>"; };
 		6EB900A82254070300F64CC9 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		6EBB097022D8DF9000F6EC69 /* LocalizationEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationEnums.swift; sourceTree = "<group>"; };
 		6EBB097222D8DFB300F6EC69 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routable.swift; path = Protocol/Routable.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 				6E266D4C222F1281005472E7 /* MainViewController.swift */,
 				6E97EDAD22399BE80040924B /* SettingsViewController.swift */,
 				6EA9807921F0E51E00583C2E /* GameViewController.swift */,
-				6EB64CBD22744D2E001BF451 /* Game+CoachMarksDataSource.swift */,
 				6EE1E269226F2A6F008B309C /* PauseViewController.swift */,
 				6E8998FD21F1699400AD3A39 /* EndingViewController.swift */,
 				6E731FBF224FC0440017C04B /* LeaderboardViewController.swift */,
@@ -431,7 +428,6 @@
 				6ECFCDF52253B80E009198DD /* BaseModel.swift in Sources */,
 				6E97EDAE22399BE80040924B /* SettingsViewController.swift in Sources */,
 				6EA9808C21F0F00C00583C2E /* Question.swift in Sources */,
-				6EB64CBE22744D2E001BF451 /* Game+CoachMarksDataSource.swift in Sources */,
 				6EFDDE142274D6F700FE7BCE /* Answer.swift in Sources */,
 				6E3FBD9F22D20EF9002031B1 /* MusicPlayer.swift in Sources */,
 				6EBD958622DC89F2007F5257 /* Helicopter.swift in Sources */,

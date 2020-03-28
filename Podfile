@@ -7,4 +7,5 @@ target 'Magic Wordz' do
 
   # Pods for Balloon
   pod 'Google-Mobile-Ads-SDK'
+  pod 'lottie-ios'
 end

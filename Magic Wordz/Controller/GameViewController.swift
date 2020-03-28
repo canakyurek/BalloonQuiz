@@ -9,7 +9,6 @@
 import UIKit
 import SpriteKit
 import GoogleMobileAds
-import Instructions
 import AVFoundation
 
 class GameViewController: UIViewController {
